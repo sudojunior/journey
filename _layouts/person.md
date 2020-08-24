@@ -1,0 +1,5 @@
+{% for entry in site.pages %}
+  {% if entry.layout == "music-record" %}
+    {% if entry.artists contains page.title or entry.artist == page.title %}{{ entry.url }}<br>{% endif %}
+  {% endif %}
+{% endfor %}

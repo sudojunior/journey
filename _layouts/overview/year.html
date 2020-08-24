@@ -1,0 +1,7 @@
+{%- for entry in site.pages -%}
+  {% assign splitPageURL = page.url | split: "/" | slice: 1, 10 %}
+  {% assign splitEntryURL = entry.url | split: "/" | slice: 1, 10 %}
+  {%- if splitPageURL[0] == splitEntryURL[0] and splitEntryURL.size > 1 -%}
+    <li><b>{{ splitEntryURL | join: "/" }}</b>: <code>{{ entry | jsonify }}</code></li>
+  {%- endif -%}
+{%- endfor -%}

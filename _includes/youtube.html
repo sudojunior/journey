@@ -1,0 +1,12 @@
+{%- comment -%}
+id: code
+params:
+  autoplay: 0 or 1
+  color: red or white
+  end: n as int
+  start: n as int
+  # list:
+  # listType:
+{%- endcomment -%}
+<iframe type="text/html" width="{{ include.width }}" height="{{ include.height }}"
+  src="https://youtube.com/embed/{{ include.id }}?{% for param in include.params %}{{ param[0] }}={{ param[1] }}{% unless forloop.last %}&{% endunless %}{% endfor %} "></iframe>

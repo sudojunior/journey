@@ -1,0 +1,4 @@
+{%- for i in (-2..2) -%}
+  {%- assign currentYear =  page.title | plus: i -%}
+  <a href="{{ site.url }}/{{ currentYear }}">{{ currentYear }}</a> {% unless forloop.last %}| {% endunless %}
+{%- endfor -%}
