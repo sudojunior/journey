@@ -23,7 +23,7 @@
 {% endif %}
 
 {% if page.uploads.youtube %}
-  {% include youtube.html id="C6CeA6vRtW4" autoplay="1" %}
+  {% include youtube.html id="C6CeA6vRtW4" %}
 {% endif %}
 
 <hr>
