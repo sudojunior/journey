@@ -17,7 +17,7 @@
 - person ~ people
 - *video* games
 
-## Routes
+## Routes (Future)
 
 - /
 - /[-_:.$]

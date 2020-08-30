@@ -1,32 +1,34 @@
 module Jekyll
-  class OverviewGenerator < Generator
-    safe = false
+  # class OverviewGenerator < Generator
+  #   safe = false
 
-    def generate(site)
-      filtered_pages = site.pages.filter { |page| page.url }
+  #   def generate(site)
+  #     return
 
-      for page in site.pages do
-        split_url = page.url.split "/"
-        _, year, category, *args = split_url
+  #     filtered_pages = site.pages.filter { |page| page.url }
 
-        template = "default"
+  #     for page in site.pages do
+  #       split_url = page.url.split "/"
+  #       _, year, category, *args = split_url
 
-        title = "#{category.capitalize} of #{year}"
+  #       template = "default"
+
+  #       title = "#{category.capitalize} of #{year}"
         
-        site.pages << CategoryPage.new(site, site.source, File.join(dir, split_url[1]), template, title) # year
-        site.pages << CategoryPage.new(site, site.source, File.join(dir, split_url[1], split_url[2]), template, title) # category
-      end
-    end
-  end
+  #       site.pages << CategoryPage.new(site, site.source, File.join(dir, split_url[1]), template, title) # year
+  #       site.pages << CategoryPage.new(site, site.source, File.join(dir, split_url[1], split_url[2]), template, title) # category
+  #     end
+  #   end
+  # end
 
-  class OverviewPage < Page
-    def initialize(site, base, dir, template, title)
-      @site = site
-      @base = base
-      @dir = dir
+  # class OverviewPage < Page
+  #   def initialize(site, base, dir, template, title)
+  #     @site = site
+  #     @base = base
+  #     @dir = dir
 
-      self.process(@name)
-      self.data['title'] = title
-    end
-  end
+  #     self.process(@name)
+  #     self.data['title'] = title
+  #   end
+  # end
 end

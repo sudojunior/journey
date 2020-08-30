@@ -1,4 +1,0 @@
----
-layout: person
-title: beabadoobee
----

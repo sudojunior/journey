@@ -1,0 +1,159 @@
+{
+  "pages": [
+    "\n",
+    "",
+    "## Lyrics\n{% comment %}Based on the YouTube video.{% endcomment %}\n\n- {0:00 - 0:26}\n\n- {0:26 - 0:31} I've got to keep the calm before the storm\n- {0:33 - 0:37} I don't want less, I don't want more\n- {0:40 - 0:44} Must bar the windows and the doors\n- {0:46 - 0:50} To keep me save to keep me warm\n\n- {0:53 - 0:57} Yeah my life is what I’m fighting for\n- {0:59 - 1:03} Can’t part the sea, can’t reach the shore\n- {1:06 - 1:10} And my voice becomes the driving force\n- {1:12 - 1:16} I won’t let this pull me overboard\n\n- {1:17 - 1:21} God keep my head above water\n- {1:21 - 1:23} Don't let me drown, \n- {1:23 - 1:24} It gets harder\n- {1:24 - 1:28} I’ll meet you there at the altar\n- {1:29 - 1:31} As I fall down to my knees\n- {1:32 - 1:35} Don’t let me drown\n- {1:36 - 1:40} Don’t let me drown\n\n{% comment %}Continue on youtu.be/EKF6ghfcQic?t=100{% endcomment %}",
+    "",
+    ""
+  ],
+  "posts": [],
+  "tags": {},
+  "categories": {},
+  "time": "2020-08-30 00:29:37 +0100",
+  "static_files": [
+    {
+      "path": "/LICENSE",
+      "modified_time": "2020-08-23 12:49:38 +0100",
+      "collection": null,
+      "basename": "LICENSE",
+      "name": "LICENSE",
+      "extname": ""
+    },
+    {
+      "path": "/README.md",
+      "modified_time": "2020-08-23 12:49:38 +0100",
+      "collection": null,
+      "basename": "README",
+      "name": "README.md",
+      "extname": ".md"
+    },
+    {
+      "path": "/docs/api.md",
+      "modified_time": "2020-08-25 12:32:48 +0100",
+      "collection": null,
+      "basename": "api",
+      "name": "api.md",
+      "extname": ".md"
+    },
+    {
+      "path": "/docs/future.md",
+      "modified_time": "2020-08-25 12:52:20 +0100",
+      "collection": null,
+      "basename": "future",
+      "name": "future.md",
+      "extname": ".md"
+    },
+    {
+      "path": "/docs/redirects.md",
+      "modified_time": "2020-08-24 13:02:22 +0100",
+      "collection": null,
+      "basename": "redirects",
+      "name": "redirects.md",
+      "extname": ".md"
+    },
+    {
+      "path": "/docs/structure.md",
+      "modified_time": "2020-08-25 12:32:49 +0100",
+      "collection": null,
+      "basename": "structure",
+      "name": "structure.md",
+      "extname": ".md"
+    }
+  ],
+  "collections": [
+    {
+      "output": true,
+      "files": [],
+      "directory": "E:/git/journey/_posts",
+      "relative_directory": "_posts",
+      "label": "posts",
+      "docs": [],
+      "permalink": "/:categories/:year/:month/:day/:title/"
+    }
+  ],
+  "html_pages": [
+    "\n",
+    "",
+    "## Lyrics\n{% comment %}Based on the YouTube video.{% endcomment %}\n\n- {0:00 - 0:26}\n\n- {0:26 - 0:31} I've got to keep the calm before the storm\n- {0:33 - 0:37} I don't want less, I don't want more\n- {0:40 - 0:44} Must bar the windows and the doors\n- {0:46 - 0:50} To keep me save to keep me warm\n\n- {0:53 - 0:57} Yeah my life is what I’m fighting for\n- {0:59 - 1:03} Can’t part the sea, can’t reach the shore\n- {1:06 - 1:10} And my voice becomes the driving force\n- {1:12 - 1:16} I won’t let this pull me overboard\n\n- {1:17 - 1:21} God keep my head above water\n- {1:21 - 1:23} Don't let me drown, \n- {1:23 - 1:24} It gets harder\n- {1:24 - 1:28} I’ll meet you there at the altar\n- {1:29 - 1:31} As I fall down to my knees\n- {1:32 - 1:35} Don’t let me drown\n- {1:36 - 1:40} Don’t let me drown\n\n{% comment %}Continue on youtu.be/EKF6ghfcQic?t=100{% endcomment %}",
+    "",
+    ""
+  ],
+  "config": null,
+  "data": {},
+  "documents": [],
+  "related_posts": null,
+  "source": "E:/git/journey",
+  "destination": "E:/git/journey/_site",
+  "collections_dir": "",
+  "cache_dir": ".jekyll-cache",
+  "plugins_dir": "_plugins",
+  "layouts_dir": "_layouts",
+  "data_dir": "_data",
+  "includes_dir": "_includes",
+  "safe": false,
+  "include": [".htaccess"],
+  "exclude": [
+    ".sass-cache",
+    ".jekyll-cache",
+    "gemfiles",
+    "Gemfile",
+    "Gemfile.lock",
+    "node_modules",
+    "vendor/bundle/",
+    "vendor/cache/",
+    "vendor/gems/",
+    "vendor/ruby/"
+  ],
+  "keep_files": [".git", ".svn"],
+  "encoding": "utf-8",
+  "markdown_ext": "markdown,mkdown,mkdn,mkd,md",
+  "strict_front_matter": false,
+  "show_drafts": null,
+  "limit_posts": 0,
+  "future": false,
+  "unpublished": false,
+  "whitelist": [],
+  "plugins": [],
+  "markdown": "kramdown",
+  "highlighter": "rouge",
+  "lsi": false,
+  "excerpt_separator": "\n\n",
+  "incremental": false,
+  "detach": false,
+  "port": "4000",
+  "host": "127.0.0.1",
+  "baseurl": null,
+  "show_dir_listing": false,
+  "permalink": "pretty",
+  "paginate_path": "/page:num",
+  "timezone": null,
+  "quiet": false,
+  "verbose": false,
+  "defaults": [],
+  "liquid": {
+    "error_mode": "warn",
+    "strict_filters": false,
+    "strict_variables": false
+  },
+  "kramdown": {
+    "auto_ids": true,
+    "toc_levels": [1, 2, 3, 4, 5, 6],
+    "entity_output": "as_char",
+    "smart_quotes": "lsquo,rsquo,ldquo,rdquo",
+    "input": "GFM",
+    "hard_wrap": false,
+    "guess_lang": true,
+    "footnote_nr": 1,
+    "show_warnings": false,
+    "syntax_highlighter": "rouge",
+    "syntax_highlighter_opts": {
+      "default_lang": "plaintext",
+      "guess_lang": true
+    },
+    "coderay": {}
+  },
+  "livereload_port": 35729,
+  "serving": true,
+  "watch": true,
+  "url": "http://localhost:4000"
+}

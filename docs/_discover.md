@@ -185,6 +185,7 @@
 | Higher Love        | Whitney Houston & Kygo                      | 28th Jun, 2019 | [YouTube](https://youtu.be/JR49dyo-y0E) |
 | 100 Bad Days       | AJR                                         | 2019           |                                         |
 | Little Rover       | The Stupendium                              | 23rd Feb, 2019 |                                         |
+| Memories           | Maroon 5                                    | 20th Sep, 2020 | [YouTube](https://youtu.be/SlPhMPnQ58k) |
 
 ## Music (Cover)
 
