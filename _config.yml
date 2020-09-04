@@ -1,3 +1,4 @@
+baseurl: /journey
 permalink: pretty
 include:
   - docs
