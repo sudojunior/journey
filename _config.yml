@@ -1,4 +1,19 @@
 baseurl: /journey
 permalink: pretty
-include:
-  - docs
+exclude:
+  - README.md
+  - package.json
+  - yarn.lock
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+
+title: Journey
+description: A media database like IMDb, but run through GitHub and deployed on Jekyll.
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default

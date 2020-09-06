@@ -1,31 +1,31 @@
 # Document API Structure
 
-## Book (/:year/books)
+## Book (/books/:year)
 
 ```
 ~ v1
-/:lang/:year/books
+/:lang/books/:year
   /index.md
   /:book_title.md
 ~ v2
-/:lang/:year/books/:book_title
+/:lang/books/:year/:book_title
   /index.md
 ```
 
-## Event (/:year/events)
+## Event (/events/:year)
 
 ```
 ~ v1
-/:lang/:year/events
+/:lang/events/:year
   /index.md
   /:event.md
 ```
 
-## Film (/:year/films)
+## Film (/films/:year)
 
 ```
 ~ v1
-/:lang/:year/films
+/:lang/films/:year
   /index.md
   /:film_director
     /index.md
@@ -33,17 +33,17 @@
 ~ v2
 ```
 
-## Music (/:year/music)
+## Music (/music/:year)
 
 ```
 ~ v1
-/:lang/:year/music
+/:lang/music/:year
   /index.md
   /:aritst
     /index.md
     /:record_title.md
 ~ v2
-/:lang/:year/music
+/:lang/music/:year
   /index.md
   /:artist
     /index.md
@@ -53,7 +53,7 @@
       /:record_title
 ```
 
-## Person (/:year/people)
+## Person (/people/:year)
 
 ```
 /:lang/:year/people
@@ -61,18 +61,18 @@
   /:person.md
 ```
 
-## Shows (/:year/shows)
+## Shows (/shows/:year)
 
 ```
 ~ v1
-/:lang/:year/shows
+/:lang/shows/:year
   /index.md
   /:show_director
     /inedx.md
     /:episode_title.md
     /:n -> ./:episode_title.md
 ~ v2
-/:lang/:year/shows
+/:lang/shows/:year
   /index.md
   /:show_director
     /index.md
@@ -86,11 +86,11 @@
         /:n -> ./:(season|series)?
 ```
 
-## Video Games (/:year/games)
+## Video Games (/games/:year)
 
 ```
 ~ v1
-/:lang/:year/shows
+/:lang/games/:year
   /index.md
   /:studio
     /index.md
