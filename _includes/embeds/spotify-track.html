@@ -1,0 +1,9 @@
+{%- comment -%}
+- [id]    : string
+- [width] : number = 300
+- [height]: number = 380
+{%- endcomment -%}
+<iframe src="https://open.spotify.com/embed/track/{{ include.id }}" 
+  width="{{ include.width | default: 300 }}" 
+  height="{{ include.height | default: 380 }}" 
+  frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>

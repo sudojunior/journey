@@ -1,0 +1,12 @@
+{% assign split_url = include.url | default: page.url | split: "/" %}
+<nav aria-label="Breadcrumb">
+  <ol>
+    {% for item in split_url %}
+    {% if item == "" %}{% continue %}{% endif %}
+    <li class="breadcrumb-item">
+      {% assign target_url = split_url | slice: 1, i + 1 | join: '/' | absolute_url %}
+      <a href="{{ target_url }}" {% if forloop.last %} aria-current="page" {% endif %}>{{ item }}</a>
+    </li>
+    {% endfor %}
+  </ol>
+</nav>

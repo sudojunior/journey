@@ -9,4 +9,4 @@ params:
   # listType:
 {%- endcomment -%}
 <iframe type="text/html" width="{{ include.width | default: 640 }}" height="{{ include.height | default: 360 }}"
-  src="https://youtube.com/embed/{{ include.id }}?{% for param in include %}{% if param[0] == 'id' or param[0] == 'width' or param[0] == 'height' %}{% continue %}{% else %}{{ param[0] }}={{ param[1] }}{% endif %}{% if forloop.last %}&origin={{ site.url }}{% endif %}{% endfor %}"></iframe>
+  src="https://youtube.com/embed/{{ include.id }}?{% for param in include %}{% if param[0] == 'id' or param[0] == 'width' or param[0] == 'height' %}{% continue %}{% else %}{{ param[0] }}={{ param[1] }}{% endif %}{% endfor %}"></iframe>

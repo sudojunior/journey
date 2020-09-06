@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="container-lg clearfix">
+  <div class="col-6">
+    {% if page.artists %}
+      {% include util/join.html target=page.artists %}
+    {% elsif page.artist %}
+      {{ page.artist }}
+    {% endif %}
+  </div>
+  <div class="col-4 float-right">
+    {% if page.uploads.youtube %}
+      {% include youtube.html id=page.uploads.youtube autoplay=1 width=300 height="auto" %}
+    {% endif %}
+
+    {% if page.uploads.spotify %}
+      {% include embeds/spotify-track.html id=page.uploads.spotify %}
+    {% endif %}
+  </div>
+</div>
+
+<hr>
+{% if page.based_on %}
+  {% for entry in site.pages %}{% if entry.url contains page.based_on %}
+    <a href="{{ entry.url | absolute_url }}">{{ entry.title }} by {% if entry.artists %}{% include util/join.html target=entry.artists %}{% else %}{{ entry.artist }}{% endif %}</a>
+  {% endif %}{% endfor %}
+{% endif %}
+
+{{ content }}

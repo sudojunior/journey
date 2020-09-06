@@ -1,4 +1,57 @@
-{%- for i in (-2..2) -%}
-  {%- assign currentYear =  page.title | plus: i -%}
-  <a href="{{ site.url }}/{{ currentYear }}">{{ currentYear }}</a> {% unless forloop.last %}| {% endunless %}
-{%- endfor -%}
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% seo %}
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | absolute_url }}">
+  <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="Header">
+    <div class="Header-item">
+      <a href="{{ site.baseurl }}" class="Header-link">Journey</a>
+    </div>
+  </div>
+  <div class="container-lg px-3 my-5 markdown-body">
+    {% include util/breadcrumbs.html %}
+
+    {% if page.title %}
+    <h1><a href="{{ page.url | absolute_url }}">{{ page.title }}</a></h1>
+    {% endif %}
+
+    {{ content }}
+
+    {% if site.github.private != true and site.github.license %}
+    <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+      <p>This site is open source on
+        <a
+          href="{{ site.github.repository_url }}">{% octicon mark-github height:24 %}/{{ site.github.repository_nwo }}</a>.
+      </p>
+
+      <a href="{{ site.github.repository_url }}/blob/{{ site.github.branch | default: 'master' }}/{{ page.path }}">
+        <button class="btn btn-outline mr-1" type="button">
+          {% octicon file-symlink-file %} View on GitHub
+        </button>
+      </a>
+
+      <a href="{{ site.github.repository_url }}/edit/{{ site.github.branch | default: 'master' }}/{{ page.path }}">
+        <button class="btn btn-primary mr-1">
+          {% octicon pencil %} Edit on GitHub
+        </button>
+      </a>
+
+    </div>
+    {% endif %}
+  </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
+    integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+  <script>anchors.add();</script>
+</body>
+
+</html>

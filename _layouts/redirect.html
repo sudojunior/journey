@@ -1,0 +1,26 @@
+---
+
+---
+<!DOCTYPE html>
+{%- assign target = page.redirect_to | absolute_url -%}
+{%- assign target_page = site.pages | where: "url",target}
+<html>
+
+<head>
+  <title>{{ target_page.title | default: site.title }}</title>
+  <meta http-equiv="refresh" content="0; url={{ target }}">
+  <!-- first -->
+</head>
+
+<body>
+  <noscript>Redirect to <a href="{{ target }}">{{ target }}</a></noscript>
+  <!-- third -->
+</body>
+<script>
+  setTimeout(() => {
+    window.location.href = "{{ target }}";
+    // second
+  }, 2000);
+</script>
+
+</html>

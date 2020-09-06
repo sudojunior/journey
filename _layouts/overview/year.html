@@ -1,7 +1,17 @@
+---
+layout: default
+---
+
 {%- for entry in site.pages -%}
-  {% assign splitPageURL = page.url | split: "/" | slice: 1, 10 %}
-  {% assign splitEntryURL = entry.url | split: "/" | slice: 1, 10 %}
-  {%- if splitPageURL[0] == splitEntryURL[0] and splitEntryURL.size > 1 -%}
-    <li><b>{{ splitEntryURL | join: "/" }}</b>: <code>{{ entry | jsonify }}</code></li>
+  {%- assign splitPageURL = page.url | split: "/" | slice: 1, 10 -%}
+  {%- assign splitEntryURL = entry.url | split: "/" | slice: 1, 10 -%}
+  {%- if splitPageURL[1] == splitEntryURL[1] and splitEntryURL.size == 4 -%}
+    <li><a href="{{ entry.url | absolute_url }}">{{- entry.title -}}</a> by
+      {% if entry.artists %}
+        {%- include util/join.html target=entry.artists -%}
+      {%- else -%}
+        {{ entry.artist }}
+      {%- endif -%}
+    </li>
   {%- endif -%}
 {%- endfor -%}

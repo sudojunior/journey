@@ -9,6 +9,10 @@ The main focus of this somewhat strange project is to give new git users a proje
 
 The _original_ motivation to make this was when observing how limited IMDB was to edit, and then thinking how it could be scaled into a git project where others could learn the ropes while contributing something that would mean something to them as an individual. The outcome is what you see here... although it could do with some improvements.
 
+## Credit
+
+This site deployment uses [`page-themes/primer`](https://github.com/page-themes/primer) as a basis for the layout, but overrides the default CSS import to include everything [`@primer/css`](https://github.com/primer/css) has to offer. *The CSS is imported from as a distribution version on [unpkg](https://unpkg.com).*
+
 ## Roadmap?
 
 While this project may not have a concrete roadmap, we do have a number of _objectives_ or **_milestones_** we would like to achieve in the future. This list by no means represents the scope of expansion, but may set wheel turning for other ideas to be put forward.
@@ -25,12 +29,6 @@ While this project may not have a concrete roadmap, we do have a number of _obje
   2. Fallback to using URL destructuring (:year, :category, :author, :title)
 
 - [ ] Networked record links of time travel
-
-  - Event (/events)
-  - Film (/films)
-  - Book (/books)
-  - Show (/shows)
-  - Video Games (/games)
 
 - [ ] Enhanced directory structure and front-matter
 
@@ -61,7 +59,37 @@ While this project may not have a concrete roadmap, we do have a number of _obje
   While this may sound contridictory, it is intended as a master tracking sheet for all of the categories housed here.  
   *Despite that, the project can continue to develop should the spreadsheet suddenly become unavailable or unrecoverable.*
 
-  You can view this spreadsheet [here](https://docs.google.com/spreadsheets/d/1pvlyYLuQHDpt453imVJB0eTXPBQqQryCZaJromQ61k8/edit?usp=sharing).  
-  *At time of writing (which is 30th August), tools / fields used to indicate if a given record has been added or needs to be updated are yet to be completed.*
+  You can view this discovery list [here](./docs/_discover) or check a year folder index file for the jeykll comment table *if it exists*.
+
+- **Will languages be implemented *eventually*?**
+
+  There are plans to implement multi-language entry support, but we would like to see how the project can continue to expand before doing so.
+
+  Users should express a need to have a particular language added, and then have contributors begin to translate entries (or add new entries).
+
+  This entry tracking becomes particularly difficult if trying to triage translations between ever-changing source languages (i.e. where the entry is originally from, and how derivatives are tracked on top of that).
+
+- **What categories could be added in the future?**
+
+  *Includes both planned and possibilities, likely to expand and evolve.*
+
+  - Books (`/books/:year/:author/:title`)
+  - Events (`/events/:year/:venue`)
+  - Games (`/games/:year/:developer/:title`)  
+    *Video Games, may expand to a wider scope if an 'RFC' is passed through*
+  - Films (`/films/:year/:director/:title`)
+  - Shows (`/shows/:year/:??/:title`)  
+    *Unsure if to go by showrunner, publisher, director, etc.*
+  - People (`/people/:year/:name`)
+    *Indexed by birth or formed year (includes Individuals, Organizations / Companies, Music Groups, etc.).*
+
+  **What categories are on the 'cliff edge'?**
+
+  - ~~YouTube (`/youtube/:year/:channel/:title`) *Unsure at the moment*  
+    *`:channel` requires custom channel url*~~
+  - ~~Twitch (`/twitch/:year/:channel`) *Unsure of format, and if to add*~~
+  - *Content* Creator (`/??/:year/:creator/:??`) *Unsure, likely merge of all content creator platforms into one*  
+    `:creator` would use main channel identifier used by the individual or group channel  
+    *Consider creator groups that host other channels as part of their network (Yogscast, Rooster Teeth -> Achievement Hunter & Funhaus, N3RDFUSION, etc.)*
 
 If this didn't answer any of you questions, feel free to drop by [TinkerStorm's discord](https://discord.gg/Bb3JQQG) or [contact me directly](https://sudojunior.github.io/about/).

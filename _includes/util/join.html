@@ -1,0 +1,13 @@
+{%- comment -%}
+- [target]: string[]
+- [char]  : string   = ", "
+- [last]  : string   = " and "
+{%- endcomment -%}
+{%- for s in include.target -%}
+  {{- s -}}
+  {%- if forloop.rindex0 == 1 -%}
+    {{- include.last | default: " and " -}}
+  {%- elsif forloop.last == false -%}
+    {{- include.char | default: ", " -}}
+  {%- endif -%}
+{%- endfor -%}
