@@ -4,7 +4,7 @@
     {% for item in split_url %}
     {% if item == "" %}{% continue %}{% endif %}
     <li class="breadcrumb-item">
-      {% assign target_url = split_url | slice: 1, split_url.size | join: '/' | absolute_url %}
+      {% assign target_url = split_url | slice: 0, forloop.index | join: '/' | absolute_url %}
       <a href="{{ target_url }}" {% if forloop.last %} aria-current="page" {% endif %}>{{ item }}</a>
     </li>
     {% endfor %}
