@@ -26,27 +26,27 @@
 
     {{ content }}
 
-    {% if site.github.private != true and site.github.license %}
+    {% comment %}{% octicon mark-github height:24 %}{% endcomment %}
     <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
       <p>This site is open source on
-        <a
-          href="{{ site.github.repository_url }}">{% octicon mark-github height:24 %}/{{ site.github.repository_nwo }}</a>.
+        <a href="{{ site.github.repository_url }}">{{ site.github.repository_nwo }}</a>.
+        
       </p>
 
+      {% comment %}{% octicon file-symlink-file %}{% endcomment %} 
       <a href="{{ site.github.repository_url }}/blob/{{ site.github.branch | default: 'master' }}/{{ page.path }}">
         <button class="btn btn-outline mr-1" type="button">
-          {% octicon file-symlink-file %} View on GitHub
+          View on GitHub
         </button>
       </a>
-
+      {% comment %}{% octicon pencil %}{% endcomment %}
       <a href="{{ site.github.repository_url }}/edit/{{ site.github.branch | default: 'master' }}/{{ page.path }}">
         <button class="btn btn-primary mr-1">
-          {% octicon pencil %} Edit on GitHub
+           Edit on GitHub
         </button>
       </a>
 
     </div>
-    {% endif %}
   </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
