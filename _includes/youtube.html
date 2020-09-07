@@ -1,12 +1,49 @@
 {%- comment -%}
-id: code
-params:
-autoplay: 0 or 1
-color: red or white
-end: n as int
-start: n as int
-# list:
-# listType:
+# YouTube Video Embed (iframe)
+
+- [id]: !string
+- [width]: ?int = 640
+- [height]: ?int = 360
+- [frameborder]: ?bool as int = 0
+- [allow]: ?string = "autoplay"
+
+*allowfullscreen and type are set as standard and cannot be changed*
+
+## YouTube Embed Parameters (Common, all optional)
+$ Full reference available at https://developers.google.com/youtube/player_parameters
+
+- [autoplay]: bool as int
+- [color]: enum {red, white}
+- [start]: int > 0
+- [end]: int > start
+- [controls]: bool as int
+
+### Playlist parameters
+
+- [list]: string
+* case: playlist -> playlist id
+(i.e. RDCLAK5uy_mkLtojKLOUUGwnu3ZnN5AaODijlieB-aQ - Today's Biggest Hits from YouTube Music)
+* case: user_uploads -> channel id
+(i.e. UC-9-kyTW8ZkZNDHQJ6FgpwQ - YouTube Music)
+* case: search -> search query
+(i.e. ??) *currently unsure on how this works, please avoid where possible*
+- [listType]: oneof(playlist, user_uploads, ~~search~~)
+
+## Width : Height (16:9)
+
+- 160:90
+- 320:180
+- 480:270
+- 640:360 *default*
+- 720:405
+- 800:450
+- 960:540
+- 1280:720
+- 1600:900
+- 1920:1080
+
 {%- endcomment -%}
-<iframe type="text/html" width="{{ include.width | default: 640 }}" height="{{ include.height | default: 360 }}" frameborder="0"
-  src="https://youtube.com/embed/{{ include.id }}?{% for param in include %}{% if param[0] == 'id' or param[0] == 'width' or param[0] == 'height' %}{% continue %}{% else %}{{ param[0] }}={{ param[1] }}{% endif %}{% endfor %}"></iframe>
+{%- assign key_exclusion = "type,width,height,frameborder,allow,id" | split: "," -%}
+<iframe type="text/html" width="{{ include.width | default: 640 }}" height="{{ include.height | default: 360 }}"
+  frameborder="{{ include.frameborder | default: 0 }}" allow="{{ include.allow | default: 'autoplay'}}" allowfullscreen
+  src="https://youtube.com/embed/{{ include.id }}?{% for param in include %}{% if key_exclusion contains param[0] %}{% continue %}{% else %}{{ param[0] }}={{ param[1] }}{% endif %}{% endfor %}"></iframe>
