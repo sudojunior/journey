@@ -28,13 +28,25 @@
 
     {% comment %}{% octicon mark-github height:24 %}{% endcomment %}
     <div class="footer border-top border-gray-light mt-5 pt-3 text-gray">
-      <div class="float-left">
-        Build revision <a href="{{ site.github.repository_url }}/commits/{{ site.github.build_revision }}">{{ site.github.build_revision | truncate: 7, "" }}</a>
+      <div class="float-left m-2">
+        <p>Build revision
+          <a href="{{ site.github.repository_url }}/commits/{{ site.github.build_revision }}"
+            class="branch-name mt-2">{{ site.github.build_revision | truncate: 7, "" }}</a></p>
+        <div>
+          {% for user in site.github.contributors limit:6 %}
+          <span class="tooltipped tooltipped-n p-1"
+            aria-label="{{ user.login }} has made {{ user.contributions }} contributions">
+            <a href="{{ user.html_url }}">
+              <img src="{{ user.avatar_url }}" alt="{{ user.login }}" class="avatar" width="32" height="32">
+            </a>
+          </span>
+          {% endfor %}
+        </div>
+
       </div>
-      <div class="float-right">
+      <div class="float-right m-2">
         <p>This site is open source on
           <a href="{{ site.github.repository_url }}">{{ site.github.repository_nwo }}</a>.
-
         </p>
 
         {% comment %}{% octicon file-symlink-file %}{% endcomment %}
