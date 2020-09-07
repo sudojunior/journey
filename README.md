@@ -2,18 +2,20 @@
 
 A media database like IMDb, but run through GitHub and deployed on Jekyll.
 
+The _original_ motivation to make this was when observing how limited IMDB was to edit, and then thinking how it could be scaled into a git project where others could learn the ropes while contributing something that would mean something to them as an individual. The outcome is what you see here... although it could do with some improvements.
+
+## Contributing
+
 The main focus of this somewhat strange project is to give new git users a project to 'practice' on while possibly contributing a piece to a puzzle.
 
 - If you have an entry you'd like to contribute, open a pull request.
 - If you find a discrepancy or issue, open an issue (keeps it somewhat formal with how site reports are tracked, but you may also choose to solve it yourself).
 
-The _original_ motivation to make this was when observing how limited IMDB was to edit, and then thinking how it could be scaled into a git project where others could learn the ropes while contributing something that would mean something to them as an individual. The outcome is what you see here... although it could do with some improvements.
-
 ## Credit
 
 This site deployment uses [`page-themes/primer`](https://github.com/page-themes/primer) as a basis for the layout, but overrides the default CSS import to include everything [`@primer/css`](https://github.com/primer/css) has to offer. *The CSS is imported from as a distribution version on [unpkg](https://unpkg.com).*
 
-## Roadmap?
+## Roadmap
 
 While this project may not have a concrete roadmap, we do have a number of _objectives_ or **_milestones_** we would like to achieve in the future. This list by no means represents the scope of expansion, but may set wheel turning for other ideas to be put forward.
 
