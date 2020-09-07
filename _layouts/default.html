@@ -27,25 +27,29 @@
     {{ content }}
 
     {% comment %}{% octicon mark-github height:24 %}{% endcomment %}
-    <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
-      <p>This site is open source on
-        <a href="{{ site.github.repository_url }}">{{ site.github.repository_nwo }}</a>.
-        
-      </p>
+    <div class="footer border-top border-gray-light mt-5 pt-3 text-gray">
+      <div class="float-left">
+        Build revision <a href="{{ site.github.repository_url }}/commits/{{ site.github.build_revision }}">{{ site.github.build_revision | truncate: 7, "" }}</a>
+      </div>
+      <div class="float-right">
+        <p>This site is open source on
+          <a href="{{ site.github.repository_url }}">{{ site.github.repository_nwo }}</a>.
 
-      {% comment %}{% octicon file-symlink-file %}{% endcomment %} 
-      <a href="{{ site.github.repository_url }}/blob/{{ site.github.branch | default: 'master' }}/{{ page.path }}">
-        <button class="btn btn-outline mr-1" type="button">
-          View on GitHub
-        </button>
-      </a>
-      {% comment %}{% octicon pencil %}{% endcomment %}
-      <a href="{{ site.github.repository_url }}/edit/{{ site.github.branch | default: 'master' }}/{{ page.path }}">
-        <button class="btn btn-primary mr-1">
-           Edit on GitHub
-        </button>
-      </a>
+        </p>
 
+        {% comment %}{% octicon file-symlink-file %}{% endcomment %}
+        <a href="{{ site.github.repository_url }}/blob/{{ site.github.branch | default: 'master' }}/{{ page.path }}">
+          <button class="btn btn-outline mr-1" type="button">
+            View on GitHub
+          </button>
+        </a>
+        {% comment %}{% octicon pencil %}{% endcomment %}
+        <a href="{{ site.github.repository_url }}/edit/{{ site.github.branch | default: 'master' }}/{{ page.path }}">
+          <button class="btn btn-primary mr-1">
+            Edit on GitHub
+          </button>
+        </a>
+      </div>
     </div>
   </div>
   </div>
