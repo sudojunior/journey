@@ -1,0 +1,7 @@
+_extends: reporanger/superpowers
+
+comments:
+  - action: delete_comment
+    pattern: "+1"
+  - action: delete_comment
+    pattern: /^:.+?:$/i
