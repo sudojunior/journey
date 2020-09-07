@@ -27,25 +27,41 @@
     {{ content }}
 
     {% comment %}{% octicon mark-github height:24 %}{% endcomment %}
-    <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
-      <p>This site is open source on
-        <a href="{{ site.github.repository_url }}">{{ site.github.repository_nwo }}</a>.
-        
-      </p>
+    <div class="footer border-top border-gray-light mt-5 pt-3 text-gray">
+      <div class="float-left m-2">
+        <p>Build revision
+          <a href="{{ site.github.repository_url }}/commits/{{ site.github.build_revision }}"
+            class="branch-name mt-2">{{ site.github.build_revision | truncate: 7, "" }}</a></p>
+        <div>
+          {% for user in site.github.contributors limit:6 %}
+          <span class="tooltipped tooltipped-n p-1"
+            aria-label="{{ user.login }} has made {{ user.contributions }} contributions">
+            <a href="{{ user.html_url }}">
+              <img src="{{ user.avatar_url }}" alt="{{ user.login }}" class="avatar" width="32" height="32">
+            </a>
+          </span>
+          {% endfor %}
+        </div>
 
-      {% comment %}{% octicon file-symlink-file %}{% endcomment %} 
-      <a href="{{ site.github.repository_url }}/blob/{{ site.github.branch | default: 'master' }}/{{ page.path }}">
-        <button class="btn btn-outline mr-1" type="button">
-          View on GitHub
-        </button>
-      </a>
-      {% comment %}{% octicon pencil %}{% endcomment %}
-      <a href="{{ site.github.repository_url }}/edit/{{ site.github.branch | default: 'master' }}/{{ page.path }}">
-        <button class="btn btn-primary mr-1">
-           Edit on GitHub
-        </button>
-      </a>
+      </div>
+      <div class="float-right m-2">
+        <p>This site is open source on
+          <a href="{{ site.github.repository_url }}">{{ site.github.repository_nwo }}</a>.
+        </p>
 
+        {% comment %}{% octicon file-symlink-file %}{% endcomment %}
+        <a href="{{ site.github.repository_url }}/blob/{{ site.github.branch | default: 'master' }}/{{ page.path }}">
+          <button class="btn btn-outline mr-1" type="button">
+            View on GitHub
+          </button>
+        </a>
+        {% comment %}{% octicon pencil %}{% endcomment %}
+        <a href="{{ site.github.repository_url }}/edit/{{ site.github.branch | default: 'master' }}/{{ page.path }}">
+          <button class="btn btn-primary mr-1">
+            Edit on GitHub
+          </button>
+        </a>
+      </div>
     </div>
   </div>
   </div>
