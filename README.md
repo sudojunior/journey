@@ -1,6 +1,6 @@
 # journey
 
-![build](https://github.com/sudojunior/journey/workflows/build/badge.svg)
+![.github/workflows/jekyll.yml](https://github.com/sudojunior/journey/workflows/.github/workflows/jekyll.yml/badge.svg)
 
 A media database like IMDb, but run through GitHub and deployed on Jekyll.
 
