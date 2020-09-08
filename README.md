@@ -57,13 +57,9 @@ While this project may not have a concrete roadmap, we do have a number of _obje
 
 - **Do you have a list of entries you'd like added?**
 
-  Yes... suprisingly. It was under the docs folder previously named `_discover.md` with a lot of formatted tables.  
-  Considering the mess it had become and the opportunity to improve it has arrived with none other than Google Sheets.  
-  
-  While this may sound contridictory, it is intended as a master tracking sheet for all of the categories housed here.  
-  *Despite that, the project can continue to develop should the spreadsheet suddenly become unavailable or unrecoverable.*
+  Yes... suprisingly. 
 
-  You can view this discovery list [here](./docs/_discover) or check a year folder index file for the jeykll comment table *if it exists*.
+  You can view this discovery list [here](./docs/_discover.md) or check a year folder index file for the jeykll comment table *if it exists*.
 
 - **Will languages be implemented *eventually*?**
 
