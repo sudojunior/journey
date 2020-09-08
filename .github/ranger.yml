@@ -54,10 +54,5 @@ comments:
     pattern: /^:.+?:$/i
   - action: delete_comment
     pattern: $PROFANITY
-  
-  - action: label
-    user: "dependabot[bot]"
-    labels:
-      - dependabot
 
 commits: []
