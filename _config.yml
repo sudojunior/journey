@@ -9,6 +9,13 @@ exclude:
 title: Journey
 description: A media database like IMDb, but run through GitHub and deployed on Jekyll.
 
+plugins:
+  - jekyll-avatar
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-mentions
+  - jekyll-octicons
+
 defaults:
   -
     scope:
