@@ -55,4 +55,9 @@ comments:
   - action: delete_comment
     pattern: $PROFANITY
 
-commits: []
+commits:
+  - action: label
+    user: dependabot
+    labels:
+      - dependabot
+
