@@ -2,8 +2,6 @@ baseurl: /journey
 permalink: pretty
 exclude:
   - README.md
-  - package.json
-  - yarn.lock
   - Gemfile
   - Gemfile.lock
   - LICENSE

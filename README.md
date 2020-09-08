@@ -1,5 +1,7 @@
 # journey
 
+![.github/workflows/jekyll.yml](https://github.com/sudojunior/journey/workflows/.github/workflows/jekyll.yml/badge.svg)
+
 A media database like IMDb, but run through GitHub and deployed on Jekyll.
 
 The _original_ motivation to make this was when observing how limited IMDB was to edit, and then thinking how it could be scaled into a git project where others could learn the ropes while contributing something that would mean something to them as an individual. The outcome is what you see here... although it could do with some improvements.
