@@ -1,6 +1,7 @@
 baseurl: /journey
 permalink: pretty
 exclude:
+  - docs/*
   - README.md
   - Gemfile
   - Gemfile.lock
