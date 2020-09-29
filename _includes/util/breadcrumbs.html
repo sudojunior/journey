@@ -1,3 +1,6 @@
+{% comment %}
+- [url]: string = page.url
+{% endcomment %}
 {% assign split_url = include.url | default: page.url | split: "/" %}
 <nav aria-label="Breadcrumb">
   <ol>
