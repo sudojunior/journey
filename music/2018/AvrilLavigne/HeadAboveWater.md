@@ -1,6 +1,7 @@
 ---
 title: Head Above Water
 artist: Avril Lavigne
+layout: music-record
 released: 2018-09-27 # 27th Sep, 2018
 uploads:
   youtube: EKF6ghfcQic

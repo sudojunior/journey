@@ -1,5 +1,6 @@
 ---
-
+layout: overview/year
+title: Music of 2015
 ---
 
 {% comment %}

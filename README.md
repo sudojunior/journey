@@ -1,6 +1,7 @@
 # journey
 
-![Jekyll](https://github.com/sudojunior/journey/workflows/Jekyll/badge.svg)
+[![Jekyll](https://github.com/sudojunior/journey/workflows/Jekyll/badge.svg)](https://github.com/sudojunior/journey/actions?query=workflow%3AJekyll)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/40a91400-90af-4653-9c83-e12f847c078e/deploy-status)](https://app.netlify.com/sites/jekylljourney/deploys)
 
 A media database like IMDb, but run through GitHub and deployed on Jekyll.
 

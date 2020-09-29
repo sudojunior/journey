@@ -4,6 +4,7 @@ artists:
 - Powfu
 - beabadoobee
 layout: music-record
+released: 2020-02-08
 based_on: /music/2017/beabadoobee/Coffee
 uploads:
   youtube: jJPMnTXl63E

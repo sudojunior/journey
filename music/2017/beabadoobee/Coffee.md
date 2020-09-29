@@ -1,5 +1,5 @@
 ---
-year: 2017-10-17
+released: 2017-10-17
 title: coffee
 artist: beabadoobee
 layout: music-record
