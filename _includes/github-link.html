@@ -1,0 +1,8 @@
+{% comment %}
+- [domain]    : Domain as string
+- [repository]: {:user/:repo} as string = site.repo
+- [scope]     : oneof(tree, blob, commit, raw, blame, edit) = 'blob'
+- [branch]    : string = "master"
+- [path]      : string = page.path
+{% endcomment %}
+https://{{ include.domain | default: "github.com" }}/{{ include.repository | default: site.repo }}/{{ include.scope | default: 'blob' }}/{{ include.branch | default: "master" }}/{{ include.path | default: page.path }}

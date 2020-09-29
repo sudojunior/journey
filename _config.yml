@@ -1,4 +1,3 @@
-baseurl: /journey
 permalink: pretty
 exclude:
   - docs/*

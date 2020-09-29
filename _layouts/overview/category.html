@@ -25,10 +25,11 @@ layout: default
     {% assign _ = check_year | date: "%Y" %}
     {% if _ != year %}
     <li class="breadcrumb-item">
-      <a href="{{ page.category | append: '/' | append: year | prepend: '/' | absolute_url }}">
+      <a href="{{ year_url | absolute_url }}">
         {{ year }}
       </a>
     </li>
+    
     {% endif %}
     {% endfor %}
     {% endfor %}

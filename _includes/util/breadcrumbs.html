@@ -1,14 +1,17 @@
 {% comment %}
 - [url]: string = page.url
+
+- [drop_last]: bool = true
+* future implementation
 {% endcomment %}
 {% assign split_url = include.url | default: page.url | split: "/" %}
 <nav aria-label="Breadcrumb">
   <ol>
     {% for item in split_url %}
     {% if item == "" %}{% continue %}{% endif %}
-    <li class="breadcrumb-item">
+    <li class="breadcrumb-item"{% if forloop.last %} aria-current="page"{% endif %}>
       {% assign target_url = split_url | slice: 0, forloop.index | join: '/' | absolute_url %}
-      <a href="{{ target_url }}" {% if forloop.last %} aria-current="page" {% endif %}>{{ item }}</a>
+      {% unless forloop.last %}<a href="{{ target_url }}">{{ item }}</a>{% else %}{{ item }}{% endunless %}
     </li>
     {% endfor %}
   </ol>
