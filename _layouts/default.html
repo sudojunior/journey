@@ -5,8 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {% seo %}
-
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | absolute_url }}">
   <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
 </head>
@@ -14,7 +12,7 @@
 <body>
   <div class="Header">
     <div class="Header-item">
-      <a href="{{ site.baseurl }}" class="Header-link">Journey</a>
+      <a href="{{ site.baseurl }}" class="Header-link">{{ site.title }}</a>
     </div>
   </div>
   <div class="container-lg px-3 my-5 markdown-body">
