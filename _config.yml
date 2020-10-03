@@ -15,7 +15,7 @@ plugins:
   - jekyll-mentions
   - jekyll-octicons
 
-repo: sudojunior/journey
+repository: sudojunior/journey
 
 defaults:
   -
