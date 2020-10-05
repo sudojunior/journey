@@ -1,0 +1,14 @@
+{%- comment -%}
+- [target] : string
+- [width] : number = 300
+- [height]: number = 400
+
+## Notes
+
+`height` and `width` defaults have been set according to the recommendations from dev.twitch.tv
+{%- endcomment -%}
+<iframe src="https://player.twitch.tv/?{{ include.target }}&parent={{ site.url }}"
+  width="{{ include.width | default: 300 }}" 
+  height="{{ include.height | default: 400 }}"
+  allowfullscreen="true" allowtransparency="true" 
+  scrolling="no" frameborder="0" allow="encrypted-media"></iframe>
