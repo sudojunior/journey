@@ -29,7 +29,7 @@ layout: default
         {{ year }}
       </a>
     </li>
-    
+
     {% endif %}
     {% endfor %}
     {% endfor %}
@@ -41,8 +41,12 @@ layout: default
   <li>
     <a href="{{ entry.url | absolute_url }}">
       {{ entry.title }} by
-      {% if entry.artists %}{% include util/join.html target=entry.artists %}{% else %}{{ entry.artist }}{% endif %} on
-      {{ entry.released | date_to_string: "ordinal", "US" }}
+      {% if entry.artists.first.target %}
+        {% include util/advanced_join.html nodes=entry.artists %}
+      {% elsif entry.artists %}
+        {% include util/join.html target=entry.artists %}
+      {% else %}
+      {{ entry.artist }}{% endif %} on {{ entry.released | date_to_string: "ordinal", "US" }}
     </a>
   </li>
   {% endfor %}

@@ -4,7 +4,9 @@ layout: default
 
 <div class="container-lg clearfix">
   <div class="col-6">
-    {% if page.artists %}
+    {% if page.artists.first.target %}
+      {% include util/advanced_join.html nodes=page.artists %}
+    {% elsif page.artists %}
       {% include util/join.html target=page.artists %}
     {% elsif page.artist %}
       {{ page.artist }}

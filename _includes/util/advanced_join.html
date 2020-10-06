@@ -1,0 +1,28 @@
+{%- comment -%}
+- [nodes]: &[]
+  - [target]: string | string[] @required
+  - [char]: string = ", "
+  - [last]: string = " and "
+  - [connector]: string = "; "
+
+## Notes
+
+Primarily targed towards static data structures for pages or data files.
+{%- endcomment -%}
+{% for node in include.nodes %}
+  {% if node.target.first != blank %}
+    {% for target in node.target %}
+      {{ target }}
+      {% if forloop.rindex0 == 1 %}
+        {{ node.last | default: " and " }}
+      {% elsif forloop.last == false %}
+        {{ node.char | default: ", " }}
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    {{ node.target }}
+  {% endif %}
+  {% unless forloop.last == true %}
+    {{ node.connector | default: "; " }}
+  {% endunless %}
+{% endfor %}
