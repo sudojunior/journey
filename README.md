@@ -12,11 +12,11 @@ The _original_ motivation to make this was when observing how limited IMDB was t
 The main focus of this somewhat strange project is to give new git users a project to 'practice' on while possibly contributing a piece to a puzzle.
 
 - If you have an entry you'd like to contribute, open a pull request.
-- If you find a discrepancy or issue, open an issue (keeps it somewhat formal with how site reports are tracked, but you may also choose to solve it yourself).
+- If you find a discrepancy or problem with the site, open an issue *or a pull request if you know what you could do to resolve it*.
 
 ## Credit
 
-This site deployment uses [`page-themes/primer`](https://github.com/page-themes/primer) as a basis for the layout, but overrides the default CSS import to include everything [`@primer/css`](https://github.com/primer/css) has to offer. *The CSS is imported from as a distribution version on [unpkg](https://unpkg.com).*
+This site deployment uses [`page-themes/primer`](https://github.com/page-themes/primer) as a basis for the layout, but overrides the default CSS import to include everything [`@primer/css`](https://github.com/primer/css) has to offer. *The CSS is imported from as a distribution version on [unpkg](https://unpkg.com).* For hosting the site itself, this project uses [Netlify](https://netlify.com) deploying on master and any pull requests targeting it.
 
 ## Roadmap
 
@@ -35,7 +35,11 @@ While this project may not have a concrete roadmap, we do have a number of _obje
 
 - [ ] Networked record links of time travel
 
+  *Partial completion with sibling node linking.*
+
 - [ ] Enhanced directory structure and front-matter
+
+  *Further documented on the [Development Notes](https://github.com/sudojunior/journey/wiki/Development-Notes#document-api-structure) page on the repo wiki.*
 
   > This would involve an upgrade to accomodate the capacity for extra entry data such as transcripts for movies, lyrics for music records or individual episodes for shows
 
