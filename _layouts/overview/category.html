@@ -5,33 +5,26 @@ layout: default
   | where_exp: "item", "item.layout contains page.category" 
   | sort: "released" 
   | group_by_exp: "item", "item.released 
-  | date: '%Y' 
-  | truncate: 3, ''"
+    | date: '%Y' 
+    | truncate: 3, ''"
 %}
 
 {% for page_set in pages %}
 <h2>{{ page_set.name | default: "???" }}0s ({{ page_set.size }})</h2>
+
 {% if page_set.name != blank %}
 <nav aria-label="Breadcrumb">
-  {% assign decade_start = page_set.name | times: 10 %}
-  {% assign decade_end = decade_start | plus: 9 %}
   <ol>
+    {% assign decade_start = page_set.name | times: 10 %}
+    {% assign decade_end = decade_start | plus: 9 %}
     {% for year in (decade_start..decade_end) %}
-    {% assign year_url = page.category | append: '/' | append: year | append: '/' | prepend: '/' %}
-    {% assign year_set = page_set.items | where_exp: "item", "item.url contains year_url" | map: "released" %}
-    {% for year in year_set %}{% assign year_set[forloop.index] = year | date: "%Y" %}{% endfor %}
-    {% assign year_set = year_set | uniq %}
-    {% for check_year in year_set %}
-    {% assign _ = check_year | date: "%Y" %}
-    {% if _ != year %}
-    <li class="breadcrumb-item">
-      <a href="{{ year_url | absolute_url }}">
-        {{ year }}
-      </a>
-    </li>
-
-    {% endif %}
-    {% endfor %}
+      {% capture isPage %}/{{ page.category }}/{{ year }}/{% endcapture %}
+      {% assign isPage = isPage | is_page %}
+      {% if isPage %}
+        <li class="breadcrumb-item">
+          <a href="{{ year_url | absolute_url }}">{{ year }}</a>
+        </li>
+      {% endif %}
     {% endfor %}
   </ol>
 </nav>
@@ -42,9 +35,9 @@ layout: default
     <a href="{{ entry.url | absolute_url }}">
       {{ entry.title }} by
       {% if entry.artists.first.target %}
-        {% include util/advanced_join.html nodes=entry.artists %}
+      {% include util/advanced_join.html nodes=entry.artists %}
       {% elsif entry.artists %}
-        {% include util/join.html target=entry.artists %}
+      {% include util/join.html target=entry.artists %}
       {% else %}
       {{ entry.artist }}{% endif %} on {{ entry.released | date_to_string: "ordinal", "US" }}
     </a>
