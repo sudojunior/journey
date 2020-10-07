@@ -32,11 +32,6 @@ labels:
     delay: 5s
     message: "Thanks for making your first pull request! :slightly_smiling_face:"
 
-  Hacktoberfest:
-    # only to be given during the month of october
-    action: comment
-    message: "This has been marked for this year's [Hacktoberfest](https://hacktoberfest.digitalocean.com)."
-
 merges:
   - action: delete_branch
 
