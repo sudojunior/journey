@@ -1,0 +1,208 @@
+# SCHEMA:
+# brand!: str
+# variants?: array[str] based on enum of
+# original, original-wordmark, plain, plain-wordmark, line, line-wordmark
+# NOTE: ~.variants will always have "original" (even if the property isn't documented)
+- brand: amazonwebservices
+  variants:
+    - original
+    - original-wordmark
+    - plain-wordmark
+- brand: android
+  variants:
+    - original
+    - original-wordmark
+    - plain
+    - plain-wordmark
+- brand: angularjs
+  variants:
+    - original
+    - original-wordmark
+    - plain
+    - plain-wordmark
+- brand: apache
+  variants:
+    - original
+    - original-wordmark
+    - plain
+    - plain-wordmark
+    - line
+    - line-wordmark
+- brand: appcelerator
+  variants:
+    - original
+    - original-workmark
+    - plain-wordmark
+- brand: apple
+- brand: atom
+  variants:
+    - original
+    - original-wordmark
+- brand: babel
+  variants:
+    - original
+    - plain
+- brand: backbonejs
+  variants:
+    - original
+    - original-wordmark
+    - plain
+    - plain-wordmark
+- brand: behance
+  variants:
+    - original
+    - original-wordmark
+    - plain
+    - plain-wordmark
+- brand: bitbucket
+  variants:
+    - original
+    - original-wordmark
+- brand: bootstrap
+  variants:
+    - original
+    - original-wordmark
+- brand: bower
+  variants:
+    - original
+    - original-wordmark
+    - plain
+    - plain-wordmark
+    - line
+    - line-wordmark
+- brand: c
+  variants:
+    - original
+    - plain
+    - line
+- brand: cakephp
+  variants:
+    - original
+    - original-wordmark
+    - plain
+    - plain-wordmark
+- brand: ceylon
+  variants:
+    - original
+    - original-wordmark
+    - plain
+    - plain-wordmark
+- brand: chrome
+  variants:
+    - original
+    - original-wordmark
+    - plain
+    - plain-wordmark
+- brand: clojure
+  variants:
+    - original
+    - plain
+    - line
+- brand: clojurescript
+  variants:
+    - original
+    - plain
+- brand: codeigniter
+  variants:
+    - original
+    - plain
+- brand: codepen
+  variants:
+    - original
+    - original-wordmark
+- brand: coffeescript
+  variants:
+    - original
+    - original-wordmark
+- brand: confluence
+  variants:
+    - original
+    - original-wordmark
+- brand: couchdb
+  variants:
+    - original
+    - original-wordmark
+    - plain
+    - plain-wordmark
+- brand: cplusplus
+  variants:
+    - original
+    - plain
+    - line
+- brand: csharp
+  variants:
+    - original
+    - plain
+    - line
+- brand: css3
+  variants:
+    - original
+    - original-wordmark
+    - plain
+    - plain-wordmark
+- brand: cucumber
+  variants:
+    - original
+    - original-wordmark
+- brand: d3js
+  variants:
+    - original
+    - original-wordmark
+- brand: debian
+  variants:
+    - original
+    - original-wordmark
+    - plain
+    - plain-wordmark
+- brand: devicon
+  variants:
+    - original
+    - original-wordmark
+- brand: django
+  variants:
+    - original
+    - plain
+    - line
+- brand: docker
+  variants:
+    - original
+    - original-wordmark
+    - plain
+    - plain-wordmark
+- brand: doctrine
+  variants:
+    - original
+    - original-wordmark
+    - plain
+    - plain-wordmark
+    - line
+    - line-wordmark
+- brand: dot-net
+  variants:
+    - original
+    - original-wordmark
+    - plain
+    - plain-wordmark
+- brand: drupal
+  variants:
+    - original
+    - original-wordmark
+    - plain
+    - plain-wordmark
+- brand: electron
+  variants:
+    - original
+    - original-wordmark
+- brand: elm
+  variants:
+    - original
+    - original-wordmark
+    - plain
+    - plain-wordmark
+- brand: ember
+- brand: erlang
+  variants:
+    - original
+    - original-wordmark
+    - plain
+    - plain-wordmark
