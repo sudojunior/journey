@@ -1,14 +1,14 @@
-// devicon svg classes
+// icon svg classes
 
 $sizes: (/* 32, */ 64, 128, 256, 512);
 
-.devicon > svg {
+.icon > svg, .icon.icon-size-32 > svg {
   width: 32px;
   height: 32px;
 }
 
 @each $size in $sizes {
-  .devicon.devicon-size-#{$size} > svg {
+  .icon.icon-size-#{$size} > svg {
     width: #{$size}px;
     height: #{$size}px;
   }
