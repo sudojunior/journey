@@ -1,4 +1,4 @@
 ---
-layout: overview/category
-category: music
+layout: overview/year
+year: 2012
 ---
