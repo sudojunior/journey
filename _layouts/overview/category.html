@@ -18,9 +18,9 @@ layout: default
     {% assign decade_start = page_set.name | times: 10 %}
     {% assign decade_end = decade_start | plus: 9 %}
     {% for year in (decade_start..decade_end) %}
-      {% capture isPage %}/{{ page.category }}/{{ year }}/{% endcapture %}
-      {% assign isPage = isPage | is_page %}
-      {% if isPage %}
+      {% capture year_url %}/{{ page.category }}/{{ year }}/{% endcapture %}
+      {% assign year_exists = year_url | is_page %}
+      {% if year_exists %}
         <li class="breadcrumb-item">
           <a href="{{ year_url | absolute_url }}">{{ year }}</a>
         </li>
