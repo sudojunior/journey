@@ -24,7 +24,7 @@ jobs:
       - name: 📂 Obtain patient history
         uses: actions/cache@v2
         with:
-          path: ~/.bundle
+          path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles("**/Gemfile.lock") }}
           restore-keys: |
             ${{ runner.os }}-gems-
@@ -50,6 +50,14 @@ jobs:
         with:
           ruby-version: 2.6
 
+      - name: 📂 Obtain build history
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
       - name: 🚚 Deliver materials
         run: |
           bundle config path vendor/bundle
@@ -58,4 +66,4 @@ jobs:
       - name: 🔨 Remove training wheels
         uses: limjh16/jekyll-action-ts@v2
         with:
-          enable_cache: true
+          enable_cache: false
