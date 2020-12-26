@@ -37,9 +37,6 @@ jobs:
           # Cache options
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: ${{ runner.os }}-gems-
-      
-      - name: 🥼 Risk assesment
-        run: bundle exec jekyll doctor --trace
 
       - name: 🚀 Ignition & liftoff
         uses: peaceiris/actions-gh-pages@v3
