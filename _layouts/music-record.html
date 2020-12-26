@@ -20,14 +20,25 @@ layout: default
     {% if page.uploads.spotify %}
       {% include embeds/spotify-track.html id=page.uploads.spotify %}
     {% endif %}
+    <hr>
+    {% if page.links %}
+    <table class="links">
+      {% for link in page.links %}
+      <tr>
+        <td>{% simpleicon {{ link.type }} 32 fill: #{{ site.data.simpleicons[link.type] }}; %}</td>
+        <td><a href="{{ link.href }}">{{ link.label }}</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% endif %}
   </div>
 </div>
 
-<hr>
 {% if page.based_on %}
-  {% for entry in site.pages %}{% if entry.url contains page.based_on %}
-    <a href="{{ entry.url | absolute_url }}">{{ entry.title }} by {% if entry.artists %}{% include util/join.html target=entry.artists %}{% else %}{{ entry.artist }}{% endif %}</a>
-  {% endif %}{% endfor %}
+{% for entry in site.pages %}{% if entry.url contains page.based_on %}
+<a href="{{ entry.url | absolute_url }}">{{ entry.title }} by
+  {% if entry.artists %}{% include util/join.html target=entry.artists %}{% else %}{{ entry.artist }}{% endif %}</a>
+{% endif %}{% endfor %}
 {% endif %}
 
 {{ content }}
