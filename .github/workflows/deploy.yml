@@ -1,7 +1,3 @@
-# Based on the environment configuration used by Alt-F4 for Factorio
-# https://github.com/AlternativeFFFF/Alt-F4/blob/master/.github/workflows/GitHub_Pages_Builder.yml
-# https://github.com/limjh16/jekyll-action-ts
-
 name: Deploy to GitHub Pages
 
 on:
@@ -25,6 +21,14 @@ jobs:
         with:
           ruby-version: 2.7
 
+      - name: 📂 Obtain test results
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
       - name: 🚚 Deliver materials
         run: |
           bundle config path vendor/bundle
@@ -33,7 +37,7 @@ jobs:
       - name: 🚧 Build
         uses: limjh16/jekyll-action-ts@v2
         with:
-          enable_cache: true
+          enable_cache: false
 
       - name: 🚀 Ignition & liftoff
         uses: peaceiris/actions-gh-pages@v3
