@@ -11,7 +11,7 @@ jobs:
   deploy:
     name: 🦺 Deploy
     runs-on: ubuntu-latest
-    if: github.repository == "sudojunior/journey"
+    if: github.repository == 'sudojunior/journey'
     steps:
       - name: 📦 Obtain the details
         uses: actions/checkout@v2
