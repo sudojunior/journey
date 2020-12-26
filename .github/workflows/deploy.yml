@@ -26,7 +26,9 @@ jobs:
           ruby-version: 2.7
 
       - name: 🚚 Deliver materials
-        run: bundle install
+        run: |
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3
 
       - name: 🚧 Build
         uses: limjh16/jekyll-action-ts@v2
