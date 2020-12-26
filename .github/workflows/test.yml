@@ -2,7 +2,8 @@ name: Jekyll
 
 on:
   pull_request:
-    branches: master
+    branches:
+      - master
 
 env:
   JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
