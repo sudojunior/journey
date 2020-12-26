@@ -14,8 +14,6 @@ plugins:
   - jekyll-mentions
   - jekyll-octicons
 
-url: https://sudojunior.github.com/journey
-
 repository: sudojunior/journey
 
 defaults:
