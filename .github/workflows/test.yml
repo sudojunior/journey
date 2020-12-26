@@ -24,7 +24,9 @@ jobs:
           ruby-version: 2.7
 
       - name: 💊 Give medication
-        run: bundle install
+        run: |
+          bundle install
+          bundle update
 
       - name: 📋 Prognosis
         run: bundle exec jeykll doctor --trace
