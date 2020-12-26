@@ -1,47 +1,9 @@
-default:
-  close:
-    delay: 7d
-    comment: ":warning: This has been marked `$LABEL` to be closed in :timer_clock: $DELAY."
-  
-  comment:
-    message: ":label: This has been given `$LABEL`."
-
-labels:
-  wontfix: close
-  invalid: close
-  duplicate:
-    action: close
-    delay: 1d
-  stale:
-    action: close
-    comment: false
-  
-  "merge when passing":
-    action: merge
-    comment: ":customs: This PR will merge after CI checks have passed."
-  dependabot:
-    action: merge
-    comment: ":truck: Auto merge queued by dependabot."
-
-  "good first issue":
-    action: comment
-    delay: 5s
-    message: "Thanks for making your first issue! :slightly_smiling_face:"
-  "new contributor":
-    action: comment
-    delay: 5s
-    message: "Thanks for making your first pull request! :slightly_smiling_face:"
+_extends: reporanger/superpowers
 
 merges:
   - action: delete_branch
 
 comments:
-  # 'duplicate' label util
-  - action: label
-    pattern: /duplicate of/i
-    labels:
-      - duplicate
-
   # spam removal
   - action: delete_comment
     pattern: "+1"
@@ -49,10 +11,4 @@ comments:
     pattern: /^:.+?:$/i
   - action: delete_comment
     pattern: $PROFANITY
-
-commits:
-  - action: label
-    user: dependabot
-    labels:
-      - dependabot
 

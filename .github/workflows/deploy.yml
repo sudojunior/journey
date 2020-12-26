@@ -1,0 +1,48 @@
+# Based on the environment configuration used by Alt-F4 for Factorio
+# https://github.com/AlternativeFFFF/Alt-F4/blob/master/.github/workflows/GitHub_Pages_Builder.yml
+# https://github.com/limjh16/jekyll-action-ts
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+
+env:
+  JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  deploy:
+    name: 🦺 Deploy
+    runs-on: ubuntu-latest
+    if: github.repository == "sudojunior/journey"
+    steps:
+      - name: 📦 Obtain the details
+        uses: actions/checkout@v2
+
+      - name: 🧪 Prepare
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
+      - name: 🚧 Build
+        uses: limjh16/jekyll-action-ts@v2
+        env:
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          enable_cache: true
+          # Format options
+          format_output: true
+          prettier_opts: '{ "useTabs": true }'
+          # Cache options
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: ${{ runner.os }}-gems-
+      
+      - name: 🥼 Risk assesment
+        run: bundle exec jekyll doctor --trace
+
+      - name: 🚀 Ignition & liftoff
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site

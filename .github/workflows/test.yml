@@ -1,0 +1,54 @@
+name: Jekyll
+
+on:
+  push:
+    branches-ignore:
+      - master
+  pull_request:
+    branches: master
+
+env:
+  JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  doctor:
+    name: 🩺 Diagnose
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📦 Obtain the details
+        uses: actions/checkout@v2
+
+      - name: 👨‍⚕️ Hire an expert
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
+      - name: 💊 Give medication
+        run: bundle install
+
+      - name: 📋 Prognosis
+        run: bundle exec jeykll doctor --trace
+  
+  build:
+    needs: doctor
+    name: 🚧 Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📦 Obtain the details
+        uses: actions/checkout@v2
+      
+      - name: 👷‍♂️ Draft schematic
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6
+
+      - name: 🔨 Remove training wheels
+        uses: limjh16/jekyll-action-ts@v2
+        with:
+          enable_cache: true
+          # Format options
+          format_output: true
+          prettier_opts: '{ "useTabs": true }'
+          # Cache options
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: ${{ runner.os }}-gems-
