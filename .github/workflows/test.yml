@@ -23,13 +23,10 @@ jobs:
         with:
           ruby-version: 2.6
 
+      - name: 🚚 Deliver materials
+        run: bundle install
+
       - name: 🔨 Remove training wheels
         uses: limjh16/jekyll-action-ts@v2
         with:
           enable_cache: true
-          # Format options
-          format_output: true
-          prettier_opts: '{ "useTabs": true }'
-          # Cache options
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: ${{ runner.os }}-gems-

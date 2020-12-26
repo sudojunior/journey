@@ -25,18 +25,13 @@ jobs:
         with:
           ruby-version: 2.7
 
+      - name: 🚚 Deliver materials
+        run: bundle install
+
       - name: 🚧 Build
         uses: limjh16/jekyll-action-ts@v2
-        env:
-          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           enable_cache: true
-          # Format options
-          format_output: true
-          prettier_opts: '{ "useTabs": true }'
-          # Cache options
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: ${{ runner.os }}-gems-
 
       - name: 🚀 Ignition & liftoff
         uses: peaceiris/actions-gh-pages@v3
