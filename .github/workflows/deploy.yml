@@ -1,0 +1,46 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+
+env:
+  JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  deploy:
+    name: 🦺 Deploy
+    runs-on: ubuntu-latest
+    if: github.repository == "sudojunior/journey"
+    steps:
+      - name: 📦 Obtain the details
+        uses: actions/checkout@v2
+
+      - name: 🧪 Prepare
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
+      - name: 📂 Obtain test results
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
+      - name: 🚚 Deliver materials
+        run: |
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3
+
+      - name: 🚧 Build
+        uses: limjh16/jekyll-action-ts@v2
+        with:
+          enable_cache: false
+
+      - name: 🚀 Ignition & liftoff
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
