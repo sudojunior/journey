@@ -1,12 +1,11 @@
 permalink: pretty
 exclude:
-  - docs/*
   - README.md
   - Gemfile
   - Gemfile.lock
   - LICENSE
 
-title: Jekyll Journey
+title: Journey
 description: A media database like IMDb, but run through GitHub and deployed on Jekyll.
 
 plugins:
@@ -15,11 +14,12 @@ plugins:
   - jekyll-mentions
   - jekyll-octicons
 
+url: https://sudojunior.github.com/journey
+
 repository: sudojunior/journey
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: default

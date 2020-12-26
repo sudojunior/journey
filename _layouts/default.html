@@ -30,11 +30,11 @@
     <div class="footer border-top border-gray-light mt-5 pt-3 text-gray">
       <div class="float-right m-2">
         <p>This site is open source on
-          <a href="https://github.com/{{ site.repo }}">{{ site.repo }}</a>.
+          <a href="https://github.com/{{ site.github.full_name }}">{{ site.github.full_name }}</a>.
         </p>
 
-        <a href="{% include github-link.html %}">
-          <button class="btn btn-outline mr-1" type="button">
+        <a href="{% include github-link.html %}" class="p-1">
+          <button class="btn btn mr-1" type="button">
             {% octicon file-symlink-file %} View on GitHub
           </button>
         </a>
