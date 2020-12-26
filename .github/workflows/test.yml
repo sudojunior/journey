@@ -11,28 +11,7 @@ env:
   JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
-  doctor:
-    name: 🩺 Diagnose
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📦 Obtain the details
-        uses: actions/checkout@v2
-
-      - name: 👨‍⚕️ Hire an expert
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.7
-
-      - name: 💊 Give medication
-        run: |
-          bundle install
-          bundle update
-
-      - name: 📋 Prognosis
-        run: jeykll doctor --trace
-  
   build:
-    needs: doctor
     name: 🚧 Build
     runs-on: ubuntu-latest
     steps:
