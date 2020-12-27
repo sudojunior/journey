@@ -67,3 +67,4 @@ jobs:
         uses: limjh16/jekyll-action-ts@v2
         with:
           enable_cache: false
+          custom_opts: "--verbose"
