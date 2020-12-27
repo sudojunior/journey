@@ -1,18 +1,37 @@
 <html lang="en-US">
 
 <head>
+  {% capture title -%}
+  {% if page.title %}{{- page.title }} | {% endif %}{{ site.title }}
+  {%- endcapture %}
+
+  <!-- Primary Meta Tags -->
+  <title>{{ title }}</title>
+
+  <meta name="title" content="{{ title }}">
+  <meta name="description" content="{{ page.excerpt | default: site.description }}">
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+  <!-- Open Graph / Facebook -->
 
-  {% if page.title %}
-  <title>{{ page.title }}</title>
-  {% else %}
-  <title>{{ site.title }}</title>
-  {% endif %}
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ page.excerpt | default: site.description }}">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ site.url }}">
+  <meta property="twitter:title" content="{{ title }}">
+  <meta property="twitter:description" content="{{ page.excerpt | default: site.description }}">
+
+  <!-- Scripts and Styles -->
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="https://unpkg.com/@primer/css/dist/primer.css" type="text/css" />
 </head>
 
 <body>
@@ -57,7 +76,14 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
     integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-  <script>anchors.add();</script>
+  <script>
+    anchors.options = {
+      visible: "always",
+      icon: "{% octicon octoface %}",
+      placement: "left"
+    };
+    anchors.add();
+  </script>
 </body>
 
 </html>
