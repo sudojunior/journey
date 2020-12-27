@@ -22,7 +22,7 @@ layout: default
       {% assign year_exists = year_url | is_page %}
       {% if year_exists %}
         <li class="breadcrumb-item">
-          <a href="{{ year_url | absolute_url }}">{{ year }}</a>
+          <a href="{{ year_url | relative_url }}">{{ year }}</a>
         </li>
       {% endif %}
     {% endfor %}
@@ -32,7 +32,7 @@ layout: default
 <ul>
   {% for entry in page_set.items %}
   <li>
-    <a href="{{ entry.url | absolute_url }}">
+    <a href="{{ entry.url | relative_url }}">
       {{ entry.title }} by
       {% if entry.artists.first.target %}
       {% include util/advanced_join.html nodes=entry.artists %}

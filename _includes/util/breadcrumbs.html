@@ -10,7 +10,7 @@
     {% for item in split_url %}
     {% if item == "" %}{% continue %}{% endif %}
     <li class="breadcrumb-item"{% if forloop.last %} aria-current="page"{% endif %}>
-      {% assign target_url = split_url | slice: 0, forloop.index | join: '/' | absolute_url %}
+      {% assign target_url = split_url | slice: 0, forloop.index | join: '/' | relative_url %}
       {% unless forloop.last %}<a href="{{ target_url }}">{{ item }}</a>{% else %}{{ item }}{% endunless %}
     </li>
     {% endfor %}

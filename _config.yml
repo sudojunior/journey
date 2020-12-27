@@ -23,3 +23,12 @@ defaults:
       path: ""
     values:
       layout: default
+
+jekyll-spaceship:
+  processors:
+    - mathjax-processor
+    - polyfill-processor
+    - media-processor
+    - emoji-prossor
+    - element-processor
+    - mermaid-processor

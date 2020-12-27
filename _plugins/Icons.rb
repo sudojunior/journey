@@ -1,5 +1,8 @@
 require "net/http"
 
+# Lines 23 and 46 use part of a stack overflow reply from sobstel
+# https://stackoverflow.com/a/35652555
+
 module Jekyll
   class DevIconsTag < Liquid::Tag
 
@@ -24,7 +27,7 @@ module Jekyll
 
     def render(context)
       # context.registers[:site].data.devicons
-      "<span class='devicon devicon-size-#{@size || 64}'>#{@@icons[@path]}</span>"
+      "<span class='devicon devicon-size-#{@size || 64}'>#{@@icons[@path].gsub(/[[:space:]]+/, ' ').strip}</span>"
     end
   end
 
@@ -45,7 +48,7 @@ module Jekyll
       end
 
       # context.registers[:site].data.simpleicons
-      "<span class='icon icon-size-#{size || 32}' style='#{style.join " "}'>#{@@icons[@path]}</span>"
+      "<span class='icon icon-size-#{size || 32}' style='#{style.join " "}'>#{@@icons[@path].gsub(/[[:space:]]+/, ' ').strip}</span>"
     end
   end
 end
