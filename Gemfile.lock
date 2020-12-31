@@ -55,6 +55,8 @@ GEM
     jekyll-octicons (11.2.0)
       jekyll (>= 3.6, < 5.0)
       octicons (= 11.2.0)
+    jekyll-random (0.1)
+      jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (2.1.0)
       sassc (> 2.0.1, < 3.0)
     jekyll-spaceship (0.9.7)
@@ -116,6 +118,7 @@ DEPENDENCIES
   jekyll-github-metadata (>= 2.13.0)
   jekyll-mentions (>= 1.6.0)
   jekyll-octicons (>= 11.2.0)
+  jekyll-random
   jekyll-spaceship (>= 0.9.7)
   kramdown-parser-gfm (>= 1.1.0)
 
