@@ -16,7 +16,7 @@ The main focus of this somewhat strange project is to give new git users a proje
 
 ## Credit
 
-This site deployment uses [`page-themes/primer`](https://github.com/page-themes/primer) as a basis for the layout, but overrides the default CSS import to include everything [`@primer/css`](https://github.com/primer/css) has to offer. *The CSS is imported from as a distribution version on [unpkg](https://unpkg.com).* For hosting the site itself, this project uses [Netlify](https://netlify.com) deploying on master and any pull requests targeting it.
+This site deployment uses [`page-themes/primer`](https://github.com/page-themes/primer) as a basis for the layout, but overrides the default CSS import to include everything [`@primer/css`](https://github.com/primer/css) has to offer. *The CSS is imported from as a distribution version on [unpkg](https://unpkg.com).*
 
 ## Roadmap
 
