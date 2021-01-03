@@ -1,4 +1,4 @@
-{% comment %}
+{% comment -%}
 - [domain]    : Domain as string
 - [repository]: {:user/:repo} as string = site.repo
 - [scope]     : oneof(tree, blob, commit, raw, blame, edit) = "blob"
@@ -10,5 +10,22 @@ This fragment overcomes *part of* the limitation given by `github_edit_link` in 
 - the repository can be set to another target, or be based on the github metadata
 - the scope can be modified to fit the given needs of the intended use
 - the path *should* be based on the current page, but can be set to another if the environment requires it
-{% endcomment %}
-https://{{ include.domain | default: "github.com" }}/{{ include.repository | defualt: site.github.full_name | default: site.repository }}/{{ include.scope | default: "blob" }}/{{ include.branch | default: site.branch | default: "master" }}/{{ include.path | default: page.path }}
+{% endcomment -%}
+https://{{
+  include.domain
+    | default: "github.com"
+}}/{{
+  include.repository
+    | defualt: site.github.full_name
+    | default: site.repository
+}}/{{
+  include.scope
+    | default: "blob"
+}}/{{
+  include.branch
+    | default: site.branch
+    | default: "master"
+}}/{{
+  include.path
+    | default: page.path
+}}

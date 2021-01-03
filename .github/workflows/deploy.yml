@@ -4,9 +4,6 @@ on:
   push:
     branches: [master]
 
-env:
-  JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 jobs:
   deploy:
     name: 🦺 Deploy
@@ -36,6 +33,8 @@ jobs:
 
       - name: 🚧 Build
         uses: limjh16/jekyll-action-ts@v2
+        env:
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           enable_cache: false
 

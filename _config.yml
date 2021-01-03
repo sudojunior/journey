@@ -14,7 +14,8 @@ plugins:
   - jekyll-mentions
   - jekyll-octicons
 
-url: https://sudojunior.github.com/journey
+url: https://sudojunior.github.io
+baseurl: /journey
 
 repository: sudojunior/journey
 
@@ -23,3 +24,12 @@ defaults:
       path: ""
     values:
       layout: default
+
+jekyll-spaceship:
+  processors:
+    - mathjax-processor
+    - polyfill-processor
+    - media-processor
+    - emoji-prossor
+    - element-processor
+    - mermaid-processor

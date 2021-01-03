@@ -36,7 +36,7 @@ layout: default
 
 {% if page.based_on %}
 {% for entry in site.pages %}{% if entry.url contains page.based_on %}
-<a href="{{ entry.url | absolute_url }}">{{ entry.title }} by
+<a href="{{ entry.url | relative_url }}">{{ entry.title }} by
   {% if entry.artists %}{% include util/join.html target=entry.artists %}{% else %}{{ entry.artist }}{% endif %}</a>
 {% endif %}{% endfor %}
 {% endif %}

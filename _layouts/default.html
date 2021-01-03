@@ -1,18 +1,43 @@
 <html lang="en-US">
 
 <head>
+  {% capture title -%}
+  {% if page.title %}{{- page.title }} | {% endif %}{{ site.title }}
+  {%- endcapture %}
+
+  <!-- Primary Meta Tags -->
+  <title>{{ title }}</title>
+
+  <meta name="title" content="{{ title }}">
+  <meta name="description" content="{{ page.excerpt | default: site.description }}">
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | absolute_url }}">
-  <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+  <!-- Open Graph / Facebook -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ page.excerpt | default: site.description }}">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ site.url }}">
+  <meta property="twitter:title" content="{{ title }}">
+  <meta property="twitter:description" content="{{ page.excerpt | default: site.description }}">
+
+  <!-- Scripts and Styles -->
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="https://unpkg.com/@primer/css/dist/primer.css" type="text/css" />
 </head>
 
 <body>
   <div class="Header">
     <div class="Header-item">
-      <a href="{{ '/' | absolute_url }}" class="Header-link">{{ site.title }}</a>
+      <a href="{{ '/' | relative_url }}" class="Header-link">{{ site.title }}</a>
     </div>
   </div>
   <div class="container-lg px-3 my-5 markdown-body">
@@ -21,7 +46,7 @@
     </div>
 
     {% if page.title %}
-    <h1><a href="{{ page.url | absolute_url }}">{{ page.title }}</a></h1>
+    <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
     {% endif %}
 
     {{ content }}
@@ -30,16 +55,17 @@
     <div class="footer border-top border-gray-light mt-5 pt-3 text-gray">
       <div class="float-right m-2">
         <p>This site is open source on
-          <a href="https://github.com/{{ site.github.full_name }}">{{ site.github.full_name }}</a>.
+          <a href="https://github.com/{{ site.github.repository_nwo }}">{{ site.github.repository_nwo }}</a>
+          {% octicon octoface size:24 %}
         </p>
 
-        <a href="{% include github-link.html %}" class="p-1">
+        <a href="{%- include github-link.html -%}" class="p-1">
           <button class="btn btn mr-1" type="button">
             {% octicon file-symlink-file %} View on GitHub
           </button>
         </a>
 
-        <a href="{% include github-link.html scope='edit' %}">
+        <a href="{%- include github-link.html scope='edit' -%}">
           <button class="btn btn-primary mr-1">
             {% octicon pencil %} Edit on GitHub
           </button>
@@ -50,7 +76,14 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
     integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-  <script>anchors.add();</script>
+  <script>
+    anchors.options = {
+      visible: "always",
+      icon: "{% octicon octoface %}",
+      placement: "left"
+    };
+    anchors.add();
+  </script>
 </body>
 
 </html>

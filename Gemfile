@@ -9,5 +9,6 @@ group :jekyll_plugins do
   gem "jekyll-github-metadata", ">= 2.13.0"
   gem "jekyll-mentions", ">= 1.6.0"
   gem "jekyll-octicons", ">= 11.2.0"
+  gem "jekyll-random", ">= 0.1"
   gem "jekyll-spaceship", ">= 0.9.7"
 end

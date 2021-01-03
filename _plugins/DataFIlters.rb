@@ -23,6 +23,9 @@ module Jekyll
       match
     end
 
+    def random_sample(items, count = 1)
+      items.sample(count)
+    end
   end
 end
 
