@@ -3,6 +3,10 @@ released: 2017-10-27
 title: Let Me Go
 layout: music-record
 links:
+  - label: Spotify - Single
+    type: spotify-track
+    ref: 5Gu0PDLN4YJeW75PpBSg9p
+    href: https://open.spotify.com/track/5Gu0PDLN4YJeW75PpBSg9p
   - label: YouTube - Audio
     type: youtubemusic
     href: https://youtu.be/XovZ04gmQgE
@@ -15,9 +19,6 @@ links:
   - label: YouTube - Personal Collection
     type: youtube
     href: https://youtu.be/6cmMYouVsXg
-  - label: Spotify - Single
-    type: spotify
-    href: https://open.spotify.com/track/5Gu0PDLN4YJeW75PpBSg9p
 uploads:
   youtube: XCWmONajkOg
   spotify: 5Gu0PDLN4YJeW75PpBSg9p
