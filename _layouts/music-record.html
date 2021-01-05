@@ -22,14 +22,16 @@ layout: default
     {% endif %}
     <hr>
     {% if page.links %}
-    <table class="links">
-      {% for link in page.links %}
-      <tr>
-        <td>{% simpleicon {{ link.type }} 32 fill: #{{ site.data.simpleicons[link.type] }}; %}</td>
-        <td><a href="{{ link.href }}">{{ link.label }}</a></td>
-      </tr>
-      {% endfor %}
-    </table>
+    {% for link in page.links %}
+    <div class="container clearfix">
+      <div class="col-3">
+        {% simpleicon {{ link.type }} 32 fill: #{{ site.data.simpleicons[link.type] }}; %}
+      </div>
+      <div class="col-3">
+        <a href="{{ link.href }}">{{ link.label }}</a>
+      </div>
+    </div>
+    {% endfor %}
     {% endif %}
   </div>
 </div>
