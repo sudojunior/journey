@@ -41,5 +41,7 @@ jobs:
       - name: 🚀 Ignition & liftoff
         uses: peaceiris/actions-gh-pages@v3
         with:
+          user_name: GitHub Actions
+          user_email: actions@github.com
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site

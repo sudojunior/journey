@@ -1,7 +1,7 @@
 _extends: reporanger/superpowers
 
 labels:
-  maintenance: merge
+  dependencies: merge
 
 merges:
   - action: delete_branch
@@ -17,6 +17,9 @@ comments:
 
 commits:
   - action: label
-    user: 'dependabot[bot]'
+    user: dependabot-preview[bot]
     labels:
       - maintenance
+
+sponsor_labels:
+  - sponsor
