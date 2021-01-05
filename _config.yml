@@ -11,7 +11,6 @@ description: A media database like IMDb, but run through GitHub and deployed on 
 plugins:
   - jekyll-avatar
   - jekyll-gist
-  - jekyll-mentions
   - jekyll-octicons
 
 url: https://sudojunior.github.io
