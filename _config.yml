@@ -4,6 +4,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
+  - tests/
 
 title: Journey
 description: A media database like IMDb, but run through GitHub and deployed on Jekyll.

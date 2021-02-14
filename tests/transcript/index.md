@@ -1,0 +1,180 @@
+- {0:03-0:07} Mysterious Narrator: Legends. Stories scattered through time.
+- {0:08-0:13} ~: Mankind has grown quite fond of recounting the exploits,
+- {$-0:19} ~: ... forgetting so easily that we are remnants, byproducts, of a forgotten past.
+- {0:20-0:24} ~: Man, born from dust, was strong, wise, and resourceful.
+- {$-0:27} ~: But he was born into an unforgiving world.
+- {0:28-0:31} ~: An inevitable darkness, creatures of destruction.
+- {0:32-0:37} ~: The creatures of Grimm set their sights on man and all of his creations.
+- {$-0:41} ~: These forces clashed and it seemed the darkness was intent
+- {$-0:45} ~: ... on returning man's brief existance to the void.
+- {0:46-0:49} ~: However, even the smallest spark of hope
+- {$-0:53} ~: ... is enough to ignite change, and in time, man's passion,
+- {$-0:56} ~: ... resourcefulness, and ingenuity led them to the tools 
+- {$-0:59} ~: ... that would help even the odds.
+- {$-1:04} ~: This power was appropriately named "Dust".
+- {$-1:08} ~: Nature's wrath in hand, man lit their way through the darkness,
+- {$-1:12} ~: ... and in the shadow's absence came strength, civilization, 
+- {$-1:15} ~: ... and most importantly, life.
+- {1:17-1:21} ~: But even the most brilliant lights eventually flicker and die.
+- {1:24-1:29} ~: And when they are gone... darkness will return.
+- {1:37-1:39} ~: So you may prepare your guardians,
+- {1:40-1:44} ~: ... build your monuments to a so-called free-world,
+- {$-1:51} ~: ... but take heed... there will be no victory in strength.
+- {$-1:55} Ozpin: But perhaps victory is in the simpler things that you've long forgotten.
+- {$-2:00} ~: Things that require a smaller, more honest soul.
+- {2:13-2:18} Roman: Do you have any idea how hard it is to find a Dust shop open this late?
+- {$-2:20} Shopkeep: P-please! Just take my Lien and leave!
+- {$-2:23} Roman: Shhh, shhh, shhh, shhh, calm down, we're not here for your money.
+- {2:24-2:26} ~: Grab the dust.
+- {2:33-2:36} Henchman: Crystals. Burn. Uncut.
+- {2:44-2:47} ~: Alright kid, put your hands where I can see 'em.
+- {2:50-2:53} ~: Hey, I said hands in the air! You got a death wish or something!?
+- {$-2:54} Ruby: Huh? 
+- {2:57-2:58} ~: Yes?
+- {$-3:00} Henchman: I said, put your hands in the air, now!
+- {$-3:02} Ruby: Are you... robbing me?
+- {$-3:03} Henchman: Yes!
+- {3:04-3:05} Ruby: Oh.
+- {3:05-3:06} Henchman: Hey!
+- {3:05-3:06} Ruby: Hyah!
+- {3:12-3:13} Henchman: Freeze!
+- {3:14-3:16} 🎵: This will be the day we're waiting for.
+- {$-3:19} 🎵: This will be the day we open up the door.
+- {$-3:22} 🎵: I don't wanna hear your absolution.
+- {$-3:25} 🎵: Hope you're ready for a revolution.
+- {$-3:27} 🎵: Welcome to a world of new solutions
+- {$-3:30} 🎵: Welcome to a world of bloody evolution-
+- {3:33-3:35} Roman: Okayyy...
+- {3:36-3:37} ~: Get her!
+- {3:57-3:59} ~: You were worth every cent. Truly you were.
+- {$-4:03} ~: Well, Red, I think we can all say it's been an eventful evening,
+- {$-4:07} ~: ... and as much as I'd love to stick around...
+- {$-4:10} ~: I'm afraid this is where we part ways.
+- {4:23-4:25} Ruby: You okay if I go after him?
+- {$-4:26} Shopkeep: Uh huh.
+- {4:30-4:31} Ruby: Hey!
+- {4:33-4:34} Roman: Persistant...
+- {4:45-4:47} ~: End of the line, Red.
+- {4:55-4:58} ~: Whoa-ho-ho! Huh?
+- {5:02-5:03} Glenda: Hm.
+- {5:14-5:16} Roman: We got a Huntress!
+- {5:27-5:28} ~: The hell?
+- {6:24-6:26} Ruby: You're a Huntress!
+- {6:28-6:30} ~: Can I have your autograph?
+- {$-6:32} Glenda: I hope you realize that your actions tonight
+- {$-6:34} ~: ... will not be taken lightly, young lady.
+- {$-6:37} ~: You put yourself and others in great danger.
+- {$-6:39} Ruby: They started it.
+- {$-6:41} Glenda: If it were up to me, you'd be sent home...
+- {$-6:44} ~: With a pat on the back...
+- {6:46-6:47} ~: And a slap on the wrist.
+- {$-6:49} Ruby: Eeek!
+- {$-6:52} Glenda: But... there is someone here who would like to meet you.
+- {6:56-6:58} Ozpin: Ruby Rose...
+- {7:00-7:01} ~: You...
+- {7:03-7:04} ~: ... have silver eyes.
+- {7:05-7:06} Ruby: Um...
+- {$-7:10} Ozpin: So! Where did you learn to do this?
+- {$-7:12} Ruby: S-Signal Academy.
+- {$-7:16} Ozpin: They taught you to use one of the most dangerous weapons ever designed?
+- {$-7:18} Ruby: Well, one teacher in particular.
+- {7:19-7:20} Ozpin: I see...
+- {7:28-7:31} ~: It's just that I've only seen one other scythe-wielder
+- {$-7:33} ~: ... of that skill before.
+- {$-7:35} ~: A dusty, old crow.
+- {$-7:37} Ruby: Mmmmm! Thash muh unkul!
+- {7:38-7:40} ~: Sorry, that's my Uncle Qrow!
+- {$-7:42} ~: He's a teacher at Signal!
+- {$-7:45} ~: I was complete garbage before he took me under his wing.
+- {$-7:49} ~: Any now I'm all like - Hooowaaah! Witchaaaa!
+- {$-7:51} Ozpin: So I've noticed.
+- {$-7:54} ~: And what is an adorable girl such as yourself
+- {$-7:56} ~: ... doing at a school designed to train warriors?
+- {$-8:01} Ruby: Ruby: Well... I want to be a Huntress.
+- {$-8:02} Ozpin: You want to slay monsters?
+- {$-8:03} Ruby: Yeah!
+- {8:04-8:06} ~: I only have two more years of training left at Signal!
+- {$-8:08} ~: And then I'm going to apply to Beacon!
+- {$-8:10} ~: You see, my sister's starting there this year,
+- {$-8:11} ~: ... and she's trying to become a Huntress,
+- {$-8:14} ~: ... and I'm trying to become a Huntress 'cause I wanna help people.
+- {$-8:16} ~: My parents always taught us to help others, so I thought,
+- {$-8:18} ~: ... Hey, I might as well make a career out of it!
+- {$-8:21} ~: I mean the police are alright, but Huntsmen and Huntresses
+- {$-8:24} ~: ... are just so much more romantic and exciting and cool and really, gosh, you know!
+- {8:28-8:30} Ozpin: Do you know who I am?
+- {$-8:32} Ruby: You're Professor Ozpin.
+- {$-8:34} ~: You're the headmaster at Beacon.
+- {$-8:36} Ozpin: Hello.
+- {$-8:38} Ruby: Nice to meet you.
+- {$-8:40} Ozpin: You want to come to my school?
+- {$-8:42} Ruby: More than anything.
+- {$-8:43} Glenda: Hmmph.
+- {$-8:45} Ozpin: Well, okay.
+- {8:48-8:51} Yang: Oh, I can't believe my baby sister is going to Beacon with me!
+- {$-8:53} ~: This is the best day ever!
+- {$-8:54} Ruby: (gasping) Please stop.
+- {$-8:56} Yang: (releasing her sister) But I'm so proud of you!
+- {$-8:58} Ruby: Really Sis, it was nothing.
+- {$-9:01} Yang: What do you mean? It was incredible!
+- {$-9:04} ~: Everyone at Beacon is going to think you're the bee's knees.
+- {$-9:06} Ruby: I don't want to be the "bee's knees", okay?
+- {$-9:08} ~: I don't want to be any kind of knees!
+- {$-9:10} ~: I just want to be a normal girl with normal knees.
+- {9:11-9:13} Yang: What's with you? Aren't you excited?
+- {$-9:14} Ruby: Of course I'm excited...
+- {$-9:15} ~: I just...
+- {$-9:17} ~: I got moved ahead two years.
+- {$-9:19} ~: I don't want people to think I'm special or anything.
+- {9:21-9:22} Yang: But you are special.
+- {9:23-9:25} Cyril: The robbery was led by nefarious
+- {$-9:28} ~: ... criminal Roman Torchwick, who continues to evade authorities.
+- {$-9:32} ~: If you have any information on his whereabouts, please contact the Vale Police Department.
+- {$-9:34} ~: Back to you, Lisa.
+- {$-9:35} Lisa: Thank you, Cyril.
+- {$-9:38} ~: In other news, this Saturday's Faunus Civil Rights protest
+- {$-9:43} ~: ... turned dark when members of the White Fang disrupted the ceremony.
+- {$-9:46} ~: The once peaceful organization has now disrupted...
+- {9:50-9:52} Glynda: Hello, and welcome to Beacon!
+- {$-9:53} Yang: Who's that?
+- {$-9:54} Glynda: My name is Glynda Goodwitch.
+- {$-9:55} Yang: Oh.
+- {$-9:58} Glynda: You are among a privileged few who have received the honor of
+- {$-10:01} ~: ... being selected to attend this prestigious academy!
+- {$-10:04} ~: Our world is experiencing an incredible time of peace,
+- {$-10:07} ~: ... and as future Huntsmen and Huntresses,
+- {$-10:09} ~: ... it is your duty to uphold it.
+- {$-10:12} ~: You have demonstrated the courage needed for such a task,
+- {$-10:16} ~: and now it is our turn to provide you with the knowledge
+- {$-10:19} ~: and the training to protect our world.
+- {10:21-10:23} Ruby: Oh, wow!
+- {10:28-10:30} ~: Look, you can see Signal from up here!
+- {10:36-10:39} ~: I guess home isn't too far after all!
+- {$-10:41} Yang: Beacon's our home, now.
+- {10:46-10:49} Yang: Well... I guess the view isn't for everyone.
+- {$-10:51} Ruby: It was a nice moment while it lasted.
+- {$-10:53} Ruby: I wonder who we're gonna meet!
+- {$-10:55} ~: I just hope they're better than Vomit Boy.
+- {$-10:58} ~: Oh, Yang, gross! You have puke on your shoe!
+- {$-11:01} ~: Yang: Gross, gross, gross, gross, gross, gross, gross, gross!
+- {11:00-11:03} Ruby: Get-Get away! Get away from me! Get away from me! Get away from me! Get away from me!
+- {11:14-11:17} 🎵: They see you as small and helpless,
+- {$-11:19} 🎵: They see you as just a child.
+- {$-11:22} 🎵: Surprise when they find out a warrior
+- {$-11:24} 🎵: ... will soon run wild.
+- {$-11:26} 🎵: Prepare for your greatest moments,
+- {$-11:29} 🎵: Prepare for your finest hour.
+- {$-11:31} 🎵: The dream that you've always dreamed
+- {$-11:34} 🎵: ... is suddenly about to flower.
+- {$-11:41} 🎵: We are lightning straying from the thunder!
+- {$-11:44} 🎵: Miracle of ancient wonder!
+- {$-11:46} 🎵: This will be the day we're waiting for.
+- {$-11:50} 🎵: This will be the day we open up the door.
+- {$-11:52} 🎵: I don't wanna hear your absolution.
+- {$-11:54} 🎵: Hope you're ready for a revolution.
+- {$-11:57} 🎵: Welcome to a world of new solutions!
+- {$-12:00} 🎵: Welcome to a world of bloody evolution...
+- {$-12:04} 🎵: In time your heart will open minds,
+- {$-12:07} 🎵: A story will be told,
+- {$-12:11} 🎵: And victory is in a simple soul!
+<span data-start="{{ " data-end="">
