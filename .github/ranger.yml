@@ -1,8 +1,5 @@
 _extends: reporanger/superpowers
 
-labels:
-  dependencies: merge
-
 merges:
   - action: delete_branch
 
@@ -14,12 +11,6 @@ comments:
     pattern: /^:.+?:$/i
   - action: delete_comment
     pattern: $PROFANITY
-
-commits:
-  - action: label
-    user: dependabot-preview[bot]
-    labels:
-      - maintenance
 
 sponsor_labels:
   - sponsor
