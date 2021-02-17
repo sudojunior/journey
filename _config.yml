@@ -4,6 +4,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
+  - tests/
 
 title: Journey
 description: A media database like IMDb, but run through GitHub and deployed on Jekyll.
@@ -11,7 +12,6 @@ description: A media database like IMDb, but run through GitHub and deployed on 
 plugins:
   - jekyll-avatar
   - jekyll-gist
-  - jekyll-mentions
   - jekyll-octicons
 
 url: https://sudojunior.github.io
@@ -24,12 +24,3 @@ defaults:
       path: ""
     values:
       layout: default
-
-jekyll-spaceship:
-  processors:
-    - mathjax-processor
-    - polyfill-processor
-    - media-processor
-    - emoji-prossor
-    - element-processor
-    - mermaid-processor

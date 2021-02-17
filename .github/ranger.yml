@@ -1,8 +1,5 @@
 _extends: reporanger/superpowers
 
-labels:
-  maintenance: merge
-
 merges:
   - action: delete_branch
 
@@ -15,8 +12,5 @@ comments:
   - action: delete_comment
     pattern: $PROFANITY
 
-commits:
-  - action: label
-    user: 'dependabot[bot]'
-    labels:
-      - maintenance
+sponsor_labels:
+  - sponsor
