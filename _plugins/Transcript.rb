@@ -20,8 +20,8 @@ module Jekyll
 				start, finish, speaker, line = match
 				
 				puts "[transcript:#{context['page']['url']}] Found #{
-					speaker != '~' ? @last_speaker : speaker} saying '#{line}' starting at #{
-						start != "$" ? @last_timestamp : start} and finishing at #{finish}"
+					speaker != '~' ? speaker : @last_speaker} saying '#{line}' starting at #{
+						start != "$" ? start : @last_timestamp} and finishing at #{finish}"
 
 				if start == '$' then
 					start = @last_timestamp
