@@ -5,6 +5,7 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - tests/
+  - vendor/
 
 title: Journey
 description: A media database like IMDb, but run through GitHub and deployed on Jekyll.
@@ -13,9 +14,6 @@ plugins:
   - jekyll-avatar
   - jekyll-gist
   - jekyll-octicons
-
-url: https://sudojunior.github.io
-baseurl: /journey
 
 repository: sudojunior/journey
 
