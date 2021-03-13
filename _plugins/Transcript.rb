@@ -13,7 +13,7 @@ module Jekyll
 			@@headers.each { |header| table << "| #{header}" }
 			table << "|\n"
 
-			@@headers.each { |header| table << "| #{"-" * header.len}" }
+			@@headers.each { |header| table << "| #{"-" * header.length}" }
 			table << "|\n"
 
 			lines.scan(@@regex) do |match|
