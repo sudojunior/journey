@@ -10,10 +10,10 @@ module Jekyll
 			lines = super
 			table = ""
 
-			@@headers.each { |header|
-				table << "| #{header}"
-			}
+			@@headers.each { |header| table << "| #{header}" }
+			table << "|\n"
 
+			@@headers.each { |header| table << "| #{"-" * header.len}" }
 			table << "|\n"
 
 			lines.scan(@@regex) do |match|
