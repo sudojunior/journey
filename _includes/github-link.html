@@ -2,7 +2,7 @@
 - [domain]    : Domain as string
 - [repository]: {:user/:repo} as string = site.repo
 - [scope]     : oneof(tree, blob, commit, raw, blame, edit) = "blob"
-- [branch]    : string = "master"
+- [branch]    : string = "main"
 - [path]      : string = page.path
 
 This fragment overcomes *part of* the limitation given by `github_edit_link` in the default gh-pages configuration. As such...
@@ -24,7 +24,7 @@ https://{{
 }}/{{
   include.branch
     | default: site.branch
-    | default: "master"
+    | default: "main"
 }}/{{
   include.path
     | default: page.path
