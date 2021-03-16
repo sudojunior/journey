@@ -177,4 +177,3 @@
 - {$-12:04} 🎵: In time your heart will open minds,
 - {$-12:07} 🎵: A story will be told,
 - {$-12:11} 🎵: And victory is in a simple soul!
-<span data-start="{{ " data-end="">
