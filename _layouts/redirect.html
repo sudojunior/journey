@@ -3,7 +3,7 @@
 ---
 <!DOCTYPE html>
 {%- assign target = page.redirect_to | absolute_url -%}
-{%- assign target_page = site.pages | where: "url",target}
+{%- assign target_page = site.pages | where: "url",target -%}
 <html>
 
 <head>
