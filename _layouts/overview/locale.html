@@ -1,0 +1,7 @@
+---
+layout: default
+---
+{% assign pages = site.pages | where: "layout", "overview/category" %}
+{% for item in pages %}
+<li><a href="{{ item.url | absolute_url }}">{{ item.category }}</a></li>
+{% endfor %}
