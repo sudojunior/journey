@@ -6,38 +6,38 @@ on:
       - main
 
 jobs:
-  doctor:
-    name: 🩺 Diagnose
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📦 Obtain patient details
-        uses: actions/checkout@v2
+  # doctor:
+  #   name: 🩺 Diagnose
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: 📦 Obtain patient details
+  #       uses: actions/checkout@v2
 
-      - name: 👨‍⚕️ Hire an expert
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.7
+  #     - name: 👨‍⚕️ Hire an expert
+  #       uses: ruby/setup-ruby@v1
+  #       with:
+  #         ruby-version: 2.7
 
-      - name: 📂 Obtain patient history
-        uses: actions/cache@v2
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
+  #     - name: 📂 Obtain patient history
+  #       uses: actions/cache@v2
+  #       with:
+  #         path: vendor/bundle
+  #         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+  #         restore-keys: |
+  #           ${{ runner.os }}-gems-
       
-      - name: 💊 Give medication
-        run: |
-          bundle config path vendor/bundle
-          bundle install --jobs 4 --retry 3
+  #     - name: 💊 Give medication
+  #       run: |
+  #         bundle config path vendor/bundle
+  #         bundle install --jobs 4 --retry 3
       
-      - name: 📋 Prognosis
-        run: bundle exec jekyll doctor --trace
-        env:
-          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #     - name: 📋 Prognosis
+  #       run: bundle exec jekyll doctor --trace
+  #       env:
+  #         JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   build:
-    needs: doctor
+    # needs: doctor
     name: 🚧 Build
     runs-on: ubuntu-latest
     steps:
