@@ -3,6 +3,7 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - Rakefile
   - LICENSE
   - tests/
   - vendor/
@@ -13,7 +14,10 @@ description: A media database like IMDb, but run through GitHub and deployed on 
 plugins:
   - jekyll-avatar
   - jekyll-gist
+  - jekyll-github-metadata
   - jekyll-octicons
+  - jekyll-random
+  - jekyll-spaceship
 
 repository: sudojunior/journey
 

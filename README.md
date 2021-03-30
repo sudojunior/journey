@@ -64,11 +64,10 @@ While this project may not have a concrete roadmap, we do have a number of _obje
 
   Yes... suprisingly. 
 
-  You can view this discovery list [here](./docs/_discover.md) or check a year folder index file for the jeykll comment table *if it exists*.
+  You can view this discovery list on the project wiki under 'Discovery', a lot of the entries are unsorted.
+  There has been several attempts to make this consistent by dumping all the data into a spreadsheet to track the necessary changes (metadata, locale, etc.).
 
-- **Will languages be implemented *eventually*?**
-
-  There are plans to implement multi-language entry support, but we would like to see how the project can continue to expand before doing so.
+- **Can *my* language be added?**
 
   Users should express a need to have a particular language added, and then have contributors begin to translate entries (or add new entries).
 
@@ -78,14 +77,14 @@ While this project may not have a concrete roadmap, we do have a number of _obje
 
   *Includes both planned and possibilities, likely to expand and evolve.*
 
-  - Books (`/books/:year/:author/:title`)
-  - Events (`/events/:year/:venue`)
-  - Games (`/games/:year/:developer/:title`)  
+  - Books (`/:lang/books/:year/:author/:title`)
+  - Events (`/:lang/events/:year/:venue`)
+  - Games (`/:lang/games/:year/:developer/:title`)  
     *Video Games, may expand to a wider scope if an 'RFC' is passed through*
-  - Films (`/films/:year/:director/:title`)
-  - Shows (`/shows/:year/:??/:title`)  
+  - Films (`/:lang/films/:year/:director/:title`)
+  - Shows (`/:lang/shows/:year/:??/:title`)  
     *Unsure if to go by showrunner, publisher, director, etc.*
-  - People (`/people/:year/:name`)
+  - People (`/:lang/people/:year/:name`)
     *Indexed by birth or formed year (includes Individuals, Organizations / Companies, Music Groups, etc.).*
 
   **What categories are on the 'cliff edge'?**
