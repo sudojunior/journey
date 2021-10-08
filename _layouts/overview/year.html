@@ -2,10 +2,16 @@
 layout: default
 ---
 
+{% comment %}
+Aware that this is still very much problematic and out of date with the rest of the design standards or code consistency that has been experimented with across the rest of the project.
+
+When the project is rebuilt using a different content engine; moved over to a different deployment or the style sheet is changed out, the root structure may also change following that.
+{% endcomment %}
+
 {%- for entry in site.pages -%}
   {%- assign splitPageURL = page.url | split: "/" | slice: 1, 10 -%}
   {%- assign splitEntryURL = entry.url | split: "/" | slice: 1, 10 -%}
-  {%- if splitPageURL[1] == splitEntryURL[1] and splitEntryURL.size == 5 -%}
+  {%- if splitPageURL[2] == splitEntryURL[2] and splitEntryURL.size == 5 -%}
     <li><a href="{{ entry.url | absolute_url }}">{{- entry.title -}}</a> by
       {% if entry.artists %}
         {%- include util/join.html target=entry.artists -%}
