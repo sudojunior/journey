@@ -15,7 +15,7 @@ When the project is rebuilt using a different content engine; moved over to a di
     <li><a href="{{ entry.url | absolute_url }}">{{- entry.title -}}</a> by
       {% if entry.artists and entry.artists.first.target %}
         {%- include util/advanced_join.html nodes=entry.artists -%}
-      {% if entry.artists.first %}
+      {% elsif entry.artists.first %}
         {%- include util/join.html target=entry.artists -%}
       {%- else -%}
         {{ entry.artists | default: entry.artist }}
