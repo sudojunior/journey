@@ -11,12 +11,14 @@ When the project is rebuilt using a different content engine; moved over to a di
 {%- for entry in site.pages -%}
   {%- assign splitPageURL = page.url | split: "/" | slice: 1, 10 -%}
   {%- assign splitEntryURL = entry.url | split: "/" | slice: 1, 10 -%}
-  {%- if splitPageURL[2] == splitEntryURL[2] and splitEntryURL.size == 5 -%}
+  {%- if splitPageURL[2] == splitEntryURL[2] and splitEntryURL.size == 6 -%}
     <li><a href="{{ entry.url | absolute_url }}">{{- entry.title -}}</a> by
-      {% if entry.artists %}
+      {% if entry.artists and entry.artists.first.target %}
+        {%- include util/advanced_join.html nodes=entry.artists -%}
+      {% if entry.artists.first %}
         {%- include util/join.html target=entry.artists -%}
       {%- else -%}
-        {{ entry.artist }}
+        {{ entry.artists | default: entry.artist }}
       {%- endif -%}
     </li>
   {%- endif -%}
